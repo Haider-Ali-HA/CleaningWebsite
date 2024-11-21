@@ -6,10 +6,10 @@ import Image4 from "../../assets/home/restoration.jpg";
 import { Link } from "react-router-dom";
 
 const services = [
-  { id: 1, name: "Air Duct Cleaning", description: "Improve air quality and system efficiency. Professional air duct cleaning services.", image: Image1 },
-  { id: 2, name: "Dryer Vent Cleaning", description: "Reduce fire hazards by cleaning vents. Ensure your dryer vents are clean and safe.", image: Image2 },
-  { id: 3, name: "PTAC Cleaning", description: "Ensure clean airflow and energy savings. Comprehensive PTAC system cleaning.", image: Image3 },
-  { id: 4, name: "Restoration", description: "Restore your property to its original condition. Expert restoration services.", image: Image4 },
+  { id: 1, name: "Air Duct Cleaning", description: "Improve air quality and system efficiency. Professional air duct cleaning services.", image: Image1, path: "/air-duct/commercial" },
+  { id: 2, name: "Dryer Vent Cleaning", description: "Reduce fire hazards by cleaning vents. Ensure your dryer vents are clean and safe.", image: Image2, path: "/dryer-vent/residential" },,
+  { id: 3, name: "PTAC Cleaning", description: "Ensure clean airflow and energy savings. Comprehensive PTAC system cleaning.", image: Image3, path: "/ptac-cleaning" },
+  { id: 4, name: "Restoration", description: "Restore your property to its original condition. Expert restoration services.", image: Image4, path: "/restoration/smoke" },
 ];
 
 const ServicesCard = () => {
@@ -45,7 +45,7 @@ const ServicesCard = () => {
               </div>
               {/* Learn More Link */}
               <Link
-                href="#"
+                to={service.path}
                 className="block py-3 rounded text-center mx-auto mb-5 text-white border w-32 bg-primary text-sm font-medium hover:underline"
               >
                 Learn More

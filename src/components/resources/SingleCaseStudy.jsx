@@ -2,6 +2,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Image1 from "../../assets/resources/casestudy1.jpg";
 import Image2 from "../../assets/resources/casestudy2.jpg";
+import Navbar from "../common/Navbar";
+import Hero from "../common/Hero";
+import Image from "../../assets/about/about.jpg"; // Adjusted image path
 
 const CaseStudy1 = {
   title: "St. Peter’s College",
@@ -48,6 +51,12 @@ const SingleCaseStudy = () => {
 
   return (
     <div>
+      <Navbar />
+    <Hero
+      title="Resources"
+      description="Restore your property to its original state with our expert fire restoration services."
+      Image={Image} // Adjusted image usage
+    />
       <section className="py-10 sm:py-16 lg:py-24 ">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="mx-auto text-left md:max-w-lg lg:max-w-2xl md:text-center">

@@ -4,6 +4,8 @@ import Blog1 from "../../assets/resources/blog1.jpg";
 import Blog2 from "../../assets/resources/blog2.jpg";
 import Blog3 from "../../assets/resources/blog3.jpg";
 import Blog4 from "../../assets/resources/blog4.jpg";
+import Navbar from "../common/Navbar";
+import Hero from "../common/Hero";
 
 const blogPosts = [
   {
@@ -80,6 +82,8 @@ const BlogsData = () => {
   };
 
   return (
+    <>
+    
     <section className="py-10 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-end justify-between">
@@ -209,6 +213,7 @@ const BlogsData = () => {
         </div>
       </div>
     </section>
+              </>
   );
 };
 

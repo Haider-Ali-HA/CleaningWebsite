@@ -79,11 +79,7 @@ const Navbar = () => {
     {
       label: "Resources",
       path: "/resources",
-      sublinks: [
-        { label: "Customer Reviews", path: "/resources/reviews" },
-        { label: "Case Studies", path: "/resources/case-studies" },
-        { label: "Blog", path: "/resources/blog" },
-      ],
+      
     },
     { label: "Contact", path: "/contact" },
   ];

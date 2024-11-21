@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../../assets/home/chooseUs.jpg";
+import { Link } from "react-router-dom";
 
 const ChooseUs = () => {
   return (
@@ -17,9 +18,9 @@ const ChooseUs = () => {
         Our equipment is the best in our industry. And our commitment to your
         satisfaction is second to none—from Fairfield, CT, to Monmouth County, NJ, and points in between.
       </p>
-      <button className="px-6 py-3 bg-primary text-white font-medium text-sm rounded-md hover:bg-blue-700">
+      <Link to="/about" className="px-6 py-3 bg-primary text-white font-medium text-sm rounded-md hover:bg-opacity-80">
         Learn More
-      </button>
+      </Link>
     </div>
 
     {/* Image Section */}

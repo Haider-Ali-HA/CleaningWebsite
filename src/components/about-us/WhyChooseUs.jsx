@@ -13,7 +13,7 @@ function WhyChooseUs() {
             <FaShippingFast size={30} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Fast & Free Shipping</h3>
-          <p className="text-gray-600 text-center">
+          <p className="text-gray-400 text-center">
             We offer quick and reliable shipping with no hidden charges.
           </p>
         </div>
@@ -24,7 +24,7 @@ function WhyChooseUs() {
             <FaShieldAlt size={30} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Warranty Protection</h3>
-          <p className="text-gray-600 text-center">
+          <p className="text-gray-400 text-center">
             Rest assured with our comprehensive warranty coverage.
           </p>
         </div>
@@ -35,7 +35,7 @@ function WhyChooseUs() {
             <FaGem size={30} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Premium Materials</h3>
-          <p className="text-gray-600 text-center">
+          <p className="text-gray-400 text-center">
             Only the best materials are used in our services and products.
           </p>
         </div>

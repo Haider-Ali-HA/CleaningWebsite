@@ -90,10 +90,10 @@ const ExteriorBird = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg text-center"
+                className=" p-6 rounded-lg  text-center"
               >
-                <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -151,9 +151,7 @@ const ExteriorBird = () => {
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
 
-        <section className="bg-[#0B1215] py-5">
-          <GoogleReviews />
-        </section>
+       
       </div>
     </div>
   );

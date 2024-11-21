@@ -1,9 +1,9 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaMap, FaMapMarkedAlt, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaMapMarkedAlt } from "react-icons/fa";
 import SocialLinks from "./SocialLinks";
 import image from "../../assets/logo-2.svg";
 import { IoMdCall } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,47 +36,48 @@ const Footer = () => {
 
             <ul class="mt-6 space-y-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                 
+                 to="/"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   Home{" "}
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                 to="/about"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   About{" "}
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/resources"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   Resource{" "}
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                 to="/contact"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   Contact{" "}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -88,47 +89,47 @@ const Footer = () => {
 
             <ul class="mt-6 space-y-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/air-duct/commercial"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   Air Duct Cleaning{" "}
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                 to="/dryer-vent/residential"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   Dryer Vent Cleaning{" "}
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/ptac-cleaning"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   PTAC Cleaning{" "}
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/restoration/smoke"
                   title=""
                   class="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
                   Restoration{" "}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

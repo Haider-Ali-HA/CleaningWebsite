@@ -94,10 +94,10 @@ const CommercialDryer = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg text-center"
+                className=" p-6 rounded-lg  shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 text-center"
               >
-                <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -146,9 +146,7 @@ const CommercialDryer = () => {
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
 
-        <section className="bg-[#0B1215] py-5">
-          <GoogleReviews />
-        </section>
+       
       </div>
     </div>
   );

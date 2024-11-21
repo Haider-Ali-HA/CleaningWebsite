@@ -23,6 +23,7 @@ import MoldRestoration from "./pages/restoration/MoldRestoration";
 import FireRestoration from "./pages/restoration/FireRestoration";
 import WaterRestoration from "./pages/restoration/WaterRestoration";
 import About from "./pages/About";
+import Resources from "./pages/Resources";
 
 const App = () => {
   return (
@@ -32,18 +33,18 @@ const App = () => {
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
-        <Route path="/resources" element={<ResourceLayout />}>
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="case-studies" element={<CaseStudies />} />
-          <Route path="case-study-1" element={<SingleCaseStudy />} />
-          <Route path="case-study-2" element={<SingleCaseStudy />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/resources/reviews" element={<Reviews />} />
+        <Route path="/resources/case-studies" element={<CaseStudies />} />
+        <Route path="/resources/case-study-1" element={<SingleCaseStudy />} />
+        <Route path="/resources/case-study-2" element={<SingleCaseStudy />} />
 
-          <Route path="blog" element={<Blogs />} />
-          <Route path="blog1" element={<SingleBlogData />} />
-          <Route path="blog2" element={<SingleBlogData />} />
-          <Route path="blog3" element={<SingleBlogData />} />
-          <Route path="blog4" element={<SingleBlogData />} />
-        </Route>
+        <Route path="/resources/blog" element={<Blogs />} />
+        <Route path="/resources/blog1" element={<SingleBlogData />} />
+        <Route path="/resources/blog2" element={<SingleBlogData />} />
+        <Route path="/resources/blog3" element={<SingleBlogData />} />
+        <Route path="/resources/blog4" element={<SingleBlogData />} />
+
         <Route path="/air-duct/commercial" element={<Commercial />} />
         <Route path="/air-duct/residential" element={<Residential />} />
         <Route path="/air-duct/billionaire" element={<Billionare />} />

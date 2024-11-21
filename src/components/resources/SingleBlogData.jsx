@@ -4,6 +4,9 @@ import Blog1 from "../../assets/resources/blog1.jpg";
 import Blog2 from "../../assets/resources/blog2.jpg";
 import Blog3 from "../../assets/resources/blog3.jpg";
 import Blog4 from "../../assets/resources/blog4.jpg";
+import Navbar from "../common/Navbar";
+import Hero from "../common/Hero";
+import Image from "../../assets/about/about.jpg"; // Adjusted image path
 
 const blogPosts = [
   {
@@ -54,6 +57,13 @@ const SingleBlogData = () => {
   const blog = blogPosts.find((post) => post.id === blogId);
 
   return (
+    <>
+    <Navbar />
+    <Hero
+      title="Resources"
+      description="Restore your property to its original state with our expert fire restoration services."
+      Image={Image} // Adjusted image usage
+    />
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Blog Header */}
@@ -78,6 +88,7 @@ const SingleBlogData = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
