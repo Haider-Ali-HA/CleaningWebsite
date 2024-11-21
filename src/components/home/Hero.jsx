@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useRef,useState}from "react";
 import Navbar from "../common/Navbar";
 import newimage from "../../assets/home/img.jpg";
 import SocialLinks from "../common/SocialLinks";
-import { BsChatRightTextFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
-
+import { motion,  useInView } from "framer-motion";
+import { useAnimations } from "../../context/Animations";
 const Hero = () => {
+  const {fadeInRightAnimation} =useAnimations();
+  const refAnimation = useRef(null);
+  const isInView = useInView(refAnimation, { once: true });
+
   return (
     <div className="h-full sm:h-screen w-full relative text-white py-10">
       <img
@@ -19,7 +22,10 @@ const Hero = () => {
 
         {/* Other elements can be added here */}
       </div>
-      <div className="text-white relative   flex flex-col h-full items-center    justify-center w-full">
+      <motion.div ref={refAnimation}
+        initial="hidden"
+        animate={isInView  ? "visible" : "hidden"}
+        variants={fadeInRightAnimation} className="text-white relative   flex flex-col h-full items-center    justify-center w-full">
         <div className=" w-3/4 flex flex-col gap-5 mt-20 sm:mt-12  lg:mt-20 items-start">
           <h1 className="text-4xl lg:text-6xl font-semibold">
             Duct Buddy: The Best Duct Cleaning Company - Bar None!
@@ -38,7 +44,7 @@ const Hero = () => {
           </div>
            
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
