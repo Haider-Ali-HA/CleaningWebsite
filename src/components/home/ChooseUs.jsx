@@ -8,13 +8,13 @@ const ChooseUs = () => {
     {/* Text Content */}
     <div className="lg:w-1/3">
       <h2 className="text-3xl md:text-4xl font-bold  mb-4">
-        Why Choose Duct Dudes
+        Why Choose Duct Buddy
       </h2>
       <p className=" font-semibold mb-6">
-        About Duct Dudes
+        About Duct Buddy
       </p>
       <p className=" leading-relaxed mb-6">
-        Why choose Duct Dudes? The answers are simple. Our training is superior.
+        Why choose Duct Buddy? The answers are simple. Our training is superior.
         Our equipment is the best in our industry. And our commitment to your
         satisfaction is second to none—from Fairfield, CT, to Monmouth County, NJ, and points in between.
       </p>

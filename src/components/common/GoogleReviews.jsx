@@ -3,7 +3,7 @@ import React from 'react'
 const GoogleReviews = () => {
   return (
    
-    <div className="elfsight-app-a454a937-33e6-48bc-aec2-c393ad36cb3e px-5" data-elfsight-app-lazy></div>
+    <div className="elfsight-app-0eeae9d9-9200-45bb-a24d-94eaf7acfec9" data-elfsight-app-lazy></div>
   )
 }
 

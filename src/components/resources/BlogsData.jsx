@@ -4,44 +4,42 @@ import Blog1 from "../../assets/resources/blog1.jpg";
 import Blog2 from "../../assets/resources/blog2.jpg";
 import Blog3 from "../../assets/resources/blog3.jpg";
 import Blog4 from "../../assets/resources/blog4.jpg";
-import Navbar from "../common/Navbar";
-import Hero from "../common/Hero";
 
 const blogPosts = [
   {
     id: 1,
-    category: "Lifestyle",
+  
     title:
-      "How To Win The Vehicle In Gta Your Five Casino Win The Gta Online Scène Vehicl",
+      "Why Regular Air Duct Cleaning is Essential for Your Health",
     description:
-      "How To Win The Vehicle In Gta Your Five Casino Win The Gta Online Scène Vehicle Gta Online Podium Vehicle: How To Be Able To Always Win The Lucky Wheel” Content Gta Online Podium Automobile For This Week, Like Using The Fortunate Wheel What Podium Automobile Is Available Immediately? Where To Get All 200 Jack O’ Lanterns In Gta On The Web (halloween What Is The Particular Gta Online Podium Car This Week Videogamer How To Win The Particular Lucky Wheel Scène Car Every Moment In Gta Online How In Order To Win The Gta Online Podium Car” “[newline]gta Online",
+      "Air ducts are a hidden part of your HVAC system, but they play a significant role in the air quality you breathe. Over time, they collect dust, debris, and allergens that can circulate through your home, leading to poor air quality and health issues. Regular air duct cleaning helps eliminate these harmful particles, ensuring you and your family breathe cleaner, fresher air. It also reduces the chances of mold growth and improves the overall efficiency of your HVAC system. Proper cleaning is essential for maintaining a healthy living environment.",
     imageUrl: Blog1,
     path: "/resources/blog1",
   },
   {
     id: 2,
-    category: "Marketing",
-    title: "Site Oficial Para Cassino Online Electronic Apostas No Brasi",
+  
+    title: "How Air Duct Cleaning Helps You Save Money",
     description:
-      "Site Oficial Para Cassino Online Electronic Apostas No Brasil Mostbet Apostas Desportivas Electronic Casino Online Web-site Oficial No Brasil Comprar Bônus 1600 R$ Entar Content Ao Acessar To Site, Clique Em “cadastre-se” As Melhores Apostas E Jogos Para Cassino Na Mostbet Apostas Esportivas Na Casa De Apostas Mostbet Mostbet – Apostas Esportivas Com U Líder De Mercado Mostbet – Site Estatal De Cassino On-line E Apostas Esportivas Bônus De Boas-vindas Para E-sports E Cassinos Sobre Mostbet Brasil Mostbet: O Site Estatal Da Líder Em Apostas Esportivas Dicas De Apostas Para Jogadores Brasileiros Inicie A Sessão Na Sua Conta Mostbet Casino",
+      "While air duct cleaning may seem like an unnecessary expense, it can save you money in the long run. Clean ducts allow your HVAC system to function more efficiently, reducing the need for frequent repairs. The cleaner your ducts, the less energy your HVAC system consumes, lowering utility bills. Regular maintenance also helps extend the lifespan of your HVAC system, preventing costly breakdowns. Here’s how keeping your air ducts clean can help your wallet.",
     imageUrl: Blog2,
     path: "/resources/blog2",
   },
   {
     id: 3,
-    category: "Productivity",
-    title: "Top 10 Mobile Casinos Real Money Video Games In 202",
+  
+    title: "The Ultimate Guide to Residential Air Duct Cleaning",
     description:
-      "Top 10 Mobile Casinos Real Money Video Games In 2024 Best Mobile Casinos & Real Cash Casino Software Jul 2024 Content Make The Most Of Real Money Bonuses Create Your Account Plus Verify Balzac Casino Legit Methods To Make Money Watching Videos Popular Best Actual Money Casino Of Which Accepts Paypal 🎁 Mobile Targeted Bonuses And Promotions July’s Top 10 Actual Money Sites What App Can Help You Get At The Online Casino? How We Rated Cellular Casino Sites Regarding Real Money Players What Are The Advantages Of Playing In On The Internet Real Cash Casinos? Can You Use Credit",
+      "Residential air duct cleaning is often overlooked, but it is crucial for maintaining a clean and healthy home. Dust, pet dander, and other pollutants can accumulate inside your ducts, spreading allergens throughout your home. Cleaning your air ducts regularly ensures that the air circulating through your home is free from these harmful particles. This process also improves the efficiency of your HVAC system and helps you breathe easier. Here’s everything you need to know about maintaining clean ducts at home",
     imageUrl: Blog3,
     path: "/resources/blog3",
   },
   {
     id: 4,
-    category: "Tech",
-    title: "Form W-2g: Specific Gambling Winnings, Manual, And Filing How-to",
+  
+    title: "Commercial Duct Cleaning: A Smart Investment for Your Business",
     description:
-      "Form W-2g: Specific Gambling Winnings, Manual, And Filing How-tos What Income Taxes Are Due Upon Gambling Winnings? Content Can You Deduct Wagering Losses? Gambling Taxes: You Include To Report Just About All Your Winnings Your Wagering Losses Might Be Deductible Do An Individual Have To Spend Taxes On Gambling Establishment Winnings In Typically The Us? Gambling Winnings Reporting Gambling Winnings Plus Losses Gambling Losses Taxable Gambling Income If You’re An Expert Gambler Taxes On Sporting Activities Betting: How That They Work, What’s Taxable Tax Reasons For Why An Individual Should Think Twice Before Bet… How To State Gaming Wins And",
+      "For businesses, clean air ducts are essential for maintaining both employee health and business efficiency. Commercial spaces, especially those with a large number of people, can quickly accumulate dust and allergens in the air ducts. Clean ducts help maintain good indoor air quality, improving the comfort and health of your employees and customers. Additionally, it ensures that your HVAC system works efficiently, preventing costly repairs. Invest in regular commercial duct cleaning for the benefit of your business.",
     imageUrl: Blog4,
     path: "/resources/blog4",
   },
@@ -149,7 +147,7 @@ const BlogsData = () => {
           >
             {blogPosts.map((post) => (
               <div key={post.id} className="flex-shrink-0 w-full sm:w-1/3 p-4">
-                <div className="overflow-hidden min-h-[34rem] bg-white rounded shadow">
+                <div className="overflow-hidden min-h-[32rem] bg-white rounded shadow">
                   <div className="">
                     <div className="relative">
                       <Link

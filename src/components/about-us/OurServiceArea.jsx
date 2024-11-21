@@ -23,20 +23,6 @@ function OurServiceArea() {
           </ul>
         </div>
 
-        {/* Washington DC */}
-        <div className="area-card p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-xl font-semibold mb-4 text-black">Washington DC</h3>
-          <ul className="space-y-2">
-            {["NE Washington DC", "NW Washington DC", "SW Washington DC"].map(
-              (location, index) => (
-                <li key={index} className="flex items-center text-gray-700">
-                  <FaMapMarkerAlt className="mr-2 text-blue-600" />
-                  {location}
-                </li>
-              )
-            )}
-          </ul>
-        </div>
 
         {/* Maryland */}
         <div className="area-card p-6 bg-white rounded-lg shadow-md">
@@ -57,6 +43,20 @@ function OurServiceArea() {
                 {location}
               </li>
             ))}
+          </ul>
+        </div>
+        {/* Washington DC */}
+        <div className="area-card p-6 bg-white rounded-lg shadow-md">
+          <h3 className="text-xl font-semibold mb-4 text-black">Washington DC</h3>
+          <ul className="space-y-2">
+            {["NE Washington DC", "NW Washington DC", "SW Washington DC", "SE Washington DC", "Capitol Hill", "Georgetown"].map(
+              (location, index) => (
+                <li key={index} className="flex items-center text-gray-700">
+                  <FaMapMarkerAlt className="mr-2 text-blue-600" />
+                  {location}
+                </li>
+              )
+            )}
           </ul>
         </div>
       </div>
