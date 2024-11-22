@@ -4,8 +4,10 @@ import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 const OurServiceAreaData = ({ faqs, title }) => {
   const { fadeInLeftAnimation, fadeInDownAnimation } = useAnimations();
-  const refAnimation = useRef(null);
-  const isInView = useInView(refAnimation, { once: true });
+  const refTitleAnimation = useRef(null);
+  const refFAQAnimation = useRef(null);
+  const isTitleInView = useInView(refTitleAnimation, { once: true });
+  const isFAQInView = useInView(refFAQAnimation, { once: true });
   const [activeIndex, setActiveIndex] = useState(null);
   console.log(faqs);
   const toggleFAQ = (index) => {
@@ -19,9 +21,9 @@ const OurServiceAreaData = ({ faqs, title }) => {
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
           <motion.h2
-            ref={refAnimation}
+            ref={refTitleAnimation}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isTitleInView ? "visible" : "hidden"}
             variants={fadeInLeftAnimation}
             className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl"
           >
@@ -29,9 +31,9 @@ const OurServiceAreaData = ({ faqs, title }) => {
           </motion.h2>
         </div>
         <motion.div
-          ref={refAnimation}
+          ref={refFAQAnimation}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isFAQInView ? "visible" : "hidden"}
           variants={fadeInDownAnimation}
           className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16"
         >

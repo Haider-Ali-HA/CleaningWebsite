@@ -7,8 +7,10 @@ import { useInView, motion } from "framer-motion";
 
 const CaseStudy = () => {
   const { fadeInLeftAnimation, fadeInRightAnimation } = useAnimations();
-  const refAnimation = useRef(null);
-  const isInView = useInView(refAnimation, { once: true });
+  const refAnimationLeft = useRef(null);
+  const refAnimationRight = useRef(null);
+  const isInViewLeft = useInView(refAnimationLeft, { once: true });
+  const isInViewRight = useInView(refAnimationRight, { once: true });
 
   return (
     <>
@@ -16,9 +18,9 @@ const CaseStudy = () => {
         <div className="px-4 mx-auto max-w-[90rem] sm:px-6 lg:px-8">
           <div className="grid items-stretch gap-y-10 md:grid-cols-2 md:gap-x-20">
             <motion.div
-              ref={refAnimation}
+              ref={refAnimationLeft}
               initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
+              animate={isInViewLeft ? "visible" : "hidden"}
               variants={fadeInLeftAnimation}
               className="relative flex flex-col lg:flex-row gap-6 mt-10 md:mt-0"
             >
@@ -58,9 +60,9 @@ const CaseStudy = () => {
               </motion.div>
 
             <motion.div
-              ref={refAnimation}
+              ref={refAnimationRight}
               initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
+              animate={isInViewRight ? "visible" : "hidden"}
               variants={fadeInRightAnimation}
               className="flex flex-col items-start xl:px-16"
             >

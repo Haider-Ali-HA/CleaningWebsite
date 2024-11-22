@@ -8,9 +8,11 @@ import Image6 from "../../assets/about/team6.webp";
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 const MeetOurTeam = () => {
-  const { fadeInLeftAnimation,fadeInDownAnimation } = useAnimations();
-  const refAnimation = useRef(null);
-  const isInView = useInView(refAnimation, { once: true });
+  const { fadeInLeftAnimation, fadeInDownAnimation } = useAnimations();
+  const refAnimationHeader = useRef(null);
+  const refAnimationGrid = useRef(null);
+  const isInViewHeader = useInView(refAnimationHeader, { once: true });
+  const isInViewGrid = useInView(refAnimationGrid, { once: true });
 
   const teamMembers = [
     { image: Image1, name: "John Doe", description: "Oversees the overall direction of the company." },
@@ -26,9 +28,9 @@ const MeetOurTeam = () => {
       <section className="py-10 bg-[#0B1215] sm:py-16 lg:py-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl">
           <motion.div
-            ref={refAnimation}
+            ref={refAnimationHeader}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInViewHeader ? "visible" : "hidden"}
             variants={fadeInLeftAnimation}
             className="max-w-3xl mx-auto text-center"
           >
@@ -42,10 +44,13 @@ const MeetOurTeam = () => {
             </p>
           </motion.div>
 
-          <motion.div ref={refAnimation}
+          <motion.div
+            ref={refAnimationGrid}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInDownAnimation} className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12">
+            animate={isInViewGrid ? "visible" : "hidden"}
+            variants={fadeInDownAnimation}
+            className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12"
+          >
             {teamMembers.map((member, index) => (
               <div key={index} className="relative aspect-w-1 aspect-h-1">
                 <img className="w-full h-full object-cover" src={member.image} alt={member.name} />

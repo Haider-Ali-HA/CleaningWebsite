@@ -5,14 +5,18 @@ import { useInView, motion } from "framer-motion";
 const IntroductionSection = ({ title, description1, description2, image }) => {
   const { fadeInLeftAnimation, fadeInUpAnimation, fadeInRightAnimation } =
     useAnimations();
-  const refAnimation = useRef(null);
-  const isInView = useInView(refAnimation, { once: true });
+  const refTitle = useRef(null);
+  const refDescription = useRef(null);
+  const refImage = useRef(null);
+  const isInViewTitle = useInView(refTitle, { once: true });
+  const isInViewDescription = useInView(refDescription, { once: true });
+  const isInViewImage = useInView(refImage, { once: true });
   return (
     <>
       <motion.h2
-        ref={refAnimation}
+        ref={refTitle}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInViewTitle ? "visible" : "hidden"}
         variants={fadeInUpAnimation}
         className="text-3xl font-bold text-center text-primary mb-8"
       >
@@ -21,9 +25,9 @@ const IntroductionSection = ({ title, description1, description2, image }) => {
       <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
         <div>
           <motion.p
-            ref={refAnimation}
+            ref={refDescription}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInViewDescription ? "visible" : "hidden"}
             variants={fadeInLeftAnimation}
             className="text-gray-200"
           >
@@ -34,9 +38,9 @@ const IntroductionSection = ({ title, description1, description2, image }) => {
           </motion.p>
         </div>
         <motion.div
-          ref={refAnimation}
+          ref={refImage}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInViewImage ? "visible" : "hidden"}
           variants={fadeInRightAnimation}
         >
           <img

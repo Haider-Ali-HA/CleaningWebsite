@@ -4,23 +4,25 @@ import { useInView,motion } from "framer-motion";
 
 const ProcessSection = ({ title, processSteps }) => {
   const { fadeInLeftAnimation, fadeInRightAnimation } = useAnimations();
-  const refAnimation = useRef(null);
-  const isInView = useInView(refAnimation, { once: true });
+  const refAnimationHeading = useRef(null);
+  const refAnimationList = useRef(null);
+  const isInViewHeading = useInView(refAnimationHeading, { once: true });
+  const isInViewList = useInView(refAnimationList, { once: true });
   return (
     <>
       <motion.h2
-        ref={refAnimation}
+        ref={refAnimationHeading}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInViewHeading ? "visible" : "hidden"}
         variants={fadeInRightAnimation}
         className="text-3xl font-bold text-center text-primary mb-8"
       >
         {title}
       </motion.h2>
       <motion.div
-        ref={refAnimation}
+        ref={refAnimationList}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInViewList ? "visible" : "hidden"}
         variants={fadeInLeftAnimation}
         className="max-w-4xl mx-auto space-y-8"
       >
