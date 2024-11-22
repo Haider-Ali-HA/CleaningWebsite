@@ -57,7 +57,7 @@ const ServicesCard = () => {
               {/* Learn More Link */}
               <Link
                 to={service.path}
-                className="block py-3 rounded text-center mx-auto mb-5 text-white border w-32 bg-primary text-sm font-medium hover:underline"
+                className="block py-3 rounded text-center mx-auto mb-5 text-black border w-32 bg-primary text-sm font-medium hover:underline"
               >
                 Learn More
               </Link>

@@ -104,7 +104,7 @@ const ContactForm = () => {
                     </div>
                   </div>
                   <div className="sm:col-span-2">
-                    <button className="inline-flex items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-white transition-all duration-200 bg-primary border border-transparent rounded-md focus:outline-none hover:bg-opacity-80 ">
+                    <button className="inline-flex items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-black transition-all duration-200 bg-primary border border-transparent rounded-md focus:outline-none hover:bg-opacity-80 ">
                       Send
                     </button>
                   </div>

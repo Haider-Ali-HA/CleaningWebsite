@@ -96,10 +96,13 @@ const Navbar = () => {
   ];
 
   return (
-    <header
+    <motion.header
       className={`fixed top-0 w-full  ${
         scrolled ? "bg-[#0f191d] bg-opacity-100" : "bg-[#0f191d] bg-opacity-70"
       } shadow-lg z-30`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1 }}
     >
       <div className="px-4 mx-auto w-5/6 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20">
@@ -273,7 +276,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

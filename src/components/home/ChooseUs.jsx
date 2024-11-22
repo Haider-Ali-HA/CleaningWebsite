@@ -26,7 +26,7 @@ const ChooseUs = () => {
         Our equipment is the best in our industry. And our commitment to your
         satisfaction is second to none—from Fairfield, CT, to Monmouth County, NJ, and points in between.
       </p>
-      <Link to="/about" className="px-6 py-3 bg-primary text-white font-medium text-sm rounded-md hover:bg-opacity-80">
+      <Link to="/about" className="px-6 py-3 bg-primary text-black font-medium text-sm rounded-md hover:bg-opacity-80">
         Learn More
       </Link>
     </motion.div>
