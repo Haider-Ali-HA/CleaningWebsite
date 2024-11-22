@@ -5,7 +5,7 @@ import { useAnimations } from "../../context/Animations";
 import { useInView,motion } from "framer-motion";
 
 const ChooseUs = () => {
-  const {fadeInLeftAnimation,fadeInRightAnimation} =useAnimations();
+  const {fadeInLeftAnimation,fadeInUpAnimation} =useAnimations();
   const refAnimation = useRef(null);
   const isInView = useInView(refAnimation, { once: true });
   return (
@@ -35,7 +35,7 @@ const ChooseUs = () => {
     <motion.div ref={refAnimation}
         initial="hidden"
         animate={isInView  ? "visible" : "hidden"}
-        variants={fadeInRightAnimation} className="relative lg:w-1/3 z-0">
+        variants={fadeInUpAnimation} className="relative lg:w-1/3 z-0">
       <img
         src={Image}
         alt="Our Agency"

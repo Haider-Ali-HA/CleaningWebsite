@@ -84,7 +84,7 @@ const Commercial = () => {
               boost employee health, and improve HVAC efficiency."
         Image={Image} // Adjusted image usage
       />
-      <div className="bg-gray-50 text-gray-800">
+      
         {/* Introduction Section */}
         <section className="py-16 px-8 bg-[#0B1215] ">
           <IntroductionSection
@@ -123,7 +123,7 @@ const Commercial = () => {
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
       </div>
-    </div>
+   
   );
 };
 

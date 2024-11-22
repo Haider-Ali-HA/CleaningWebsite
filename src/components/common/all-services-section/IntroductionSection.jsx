@@ -3,14 +3,14 @@ import { useAnimations } from "../../../context/Animations";
 import { useInView, motion } from "framer-motion";
 
 const IntroductionSection = ({ title, description1, description2, image }) => {
-  const { fadeInLeftAnimation, fadeInUpAnimation, fadeInRightAnimation } =
-    useAnimations();
+  const { fadeInLeftAnimation, fadeInUpAnimation } = useAnimations();
   const refTitle = useRef(null);
   const refDescription = useRef(null);
   const refImage = useRef(null);
   const isInViewTitle = useInView(refTitle, { once: true });
   const isInViewDescription = useInView(refDescription, { once: true });
   const isInViewImage = useInView(refImage, { once: true });
+
   return (
     <>
       <motion.h2
@@ -41,7 +41,7 @@ const IntroductionSection = ({ title, description1, description2, image }) => {
           ref={refImage}
           initial="hidden"
           animate={isInViewImage ? "visible" : "hidden"}
-          variants={fadeInRightAnimation}
+          variants={fadeInLeftAnimation}
         >
           <img
             src={image}

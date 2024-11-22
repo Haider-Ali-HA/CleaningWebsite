@@ -3,7 +3,7 @@ import { useAnimations } from "../../../context/Animations";
 import { useInView,motion } from "framer-motion";
 
 const ProcessSection = ({ title, processSteps }) => {
-  const { fadeInLeftAnimation, fadeInRightAnimation } = useAnimations();
+  const { fadeInLeftAnimation, fadeInUpAnimation } = useAnimations();
   const refAnimationHeading = useRef(null);
   const refAnimationList = useRef(null);
   const isInViewHeading = useInView(refAnimationHeading, { once: true });
@@ -14,7 +14,7 @@ const ProcessSection = ({ title, processSteps }) => {
         ref={refAnimationHeading}
         initial="hidden"
         animate={isInViewHeading ? "visible" : "hidden"}
-        variants={fadeInRightAnimation}
+        variants={fadeInUpAnimation}
         className="text-3xl font-bold text-center text-primary mb-8"
       >
         {title}
