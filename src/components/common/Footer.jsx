@@ -10,17 +10,26 @@ import { useInView, motion } from "framer-motion";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { fadeInLeftAnimation } = useAnimations();
-  const refAnimation = useRef(null);
-  const isInView = useInView(refAnimation, { once: true });
+  const refAnimation1 = useRef(null);
+  const refAnimation2 = useRef(null);
+  const refAnimation3 = useRef(null);
+  const refAnimation4 = useRef(null);
+  const refAnimation5 = useRef(null);
+
+  const isInView1 = useInView(refAnimation1, { once: true });
+  const isInView2 = useInView(refAnimation2, { once: true });
+  const isInView3 = useInView(refAnimation3, { once: true });
+  const isInView4 = useInView(refAnimation4, { once: true });
+  const isInView5 = useInView(refAnimation5, { once: true });
 
   return (
     <section className="py-10 bg-[#0f191d]  sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:col-span-3  lg:grid-cols-5 gap-y-16 gap-x-12">
           <motion.div
-            ref={refAnimation}
+            ref={refAnimation1}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInView1 ? "visible" : "hidden"}
             variants={fadeInLeftAnimation}
             className="col-span-2 md:col-span-3 lg:col-span-2 "
           >
@@ -37,10 +46,12 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          <motion.div    ref={refAnimation}
+          <motion.div
+            ref={refAnimation2}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInLeftAnimation}>
+            animate={isInView2 ? "visible" : "hidden"}
+            variants={fadeInLeftAnimation}
+          >
             <p className="text-sm font-semibold tracking-widest text-primary uppercase">
               Company
             </p>
@@ -92,10 +103,12 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          <motion.div    ref={refAnimation}
+          <motion.div
+            ref={refAnimation3}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInLeftAnimation}>
+            animate={isInView3 ? "visible" : "hidden"}
+            variants={fadeInLeftAnimation}
+          >
             <p className="text-sm font-semibold tracking-widest text-primary uppercase">
               Services
             </p>
@@ -146,10 +159,12 @@ const Footer = () => {
               </li>
             </ul>
           </motion.div>
-          <motion.div    ref={refAnimation}
+          <motion.div
+            ref={refAnimation4}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInLeftAnimation}>
+            animate={isInView4 ? "visible" : "hidden"}
+            variants={fadeInLeftAnimation}
+          >
             <p className="text-sm font-semibold tracking-widest text-primary uppercase">
               Contact Us
             </p>
@@ -181,10 +196,13 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        <motion.p    ref={refAnimation}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInLeftAnimation} className="text-sm text-center text-gray-200">
+        <motion.p
+          ref={refAnimation5}
+          initial="hidden"
+          animate={isInView5 ? "visible" : "hidden"}
+          variants={fadeInLeftAnimation}
+          className="text-sm text-center text-gray-200"
+        >
           <hr className="mt-16 mb-10 border-gray-200" />© Copyright{" "}
           {currentYear}, All Rights Reserved by Duct Buddy LLC
         </motion.p>
