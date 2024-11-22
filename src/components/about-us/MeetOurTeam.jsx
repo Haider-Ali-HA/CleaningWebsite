@@ -12,6 +12,15 @@ const MeetOurTeam = () => {
   const refAnimation = useRef(null);
   const isInView = useInView(refAnimation, { once: true });
 
+  const teamMembers = [
+    { image: Image1, name: "John Doe", description: "Oversees the overall direction of the company." },
+    { image: Image2, name: "Jane Smith", description: "Leads the technology and engineering teams." },
+    { image: Image3, name: "Alice Johnson", description: "Manages the company's finances." },
+    { image: Image4, name: "Bob Brown", description: "Ensures smooth operations across the company." },
+    { image: Image5, name: "Charlie Davis", description: "Heads the marketing strategies and campaigns." },
+    { image: Image6, name: "Eve Wilson", description: "Oversees the information technology strategy." },
+  ];
+
   return (
     <div>
       <section className="py-10 bg-[#0B1215] sm:py-16 lg:py-24">
@@ -37,28 +46,15 @@ const MeetOurTeam = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={fadeInDownAnimation} className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 md:mt-16 lg:gap-x-12">
-            <div className="aspect-w-1 aspect-h-1">
-              <img className="w-full h-full object-cover" src={Image1} alt="" />
-            </div>
-
-            <div className="aspect-w-1 aspect-h-1">
-              <img className="w-full h-full object-cover" src={Image2} alt="" />
-            </div>
-
-            <div className="aspect-w-1 aspect-h-1">
-              <img className="w-full h-full object-cover" src={Image3} alt="" />
-            </div>
-            <div className="aspect-w-1 aspect-h-1">
-              <img className="w-full h-full object-cover" src={Image4} alt="" />
-            </div>
-
-            <div className="aspect-w-1 aspect-h-1">
-              <img className="w-full h-full object-cover" src={Image5} alt="" />
-            </div>
-
-            <div className="aspect-w-1 aspect-h-1">
-              <img className="w-full h-full object-cover" src={Image6} alt="" />
-            </div>
+            {teamMembers.map((member, index) => (
+              <div key={index} className="relative aspect-w-1 aspect-h-1">
+                <img className="w-full h-full object-cover" src={member.image} alt={member.name} />
+                <div className="absolute bottom-0 left-0  text-center pb-5 right-0 bg-gray-800 bg-opacity-60 text-white p-2">
+                  <h3 className="text-lg font-semibold">{member.name}</h3>
+                  <p className="text-xs">{member.description}</p>
+                </div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>

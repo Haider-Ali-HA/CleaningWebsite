@@ -9,20 +9,20 @@ import { useInView, motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { fadeInLeftAnimation,fadeInDownAnimation } = useAnimations();
+  const { fadeInLeftAnimation, fadeInDownAnimation } = useAnimations();
   const refAnimation = useRef(null);
   const isInView = useInView(refAnimation, { once: true });
 
   return (
     <section className="py-10 bg-[#0f191d]  sm:pt-16 lg:pt-24">
-      <div
-        
-        className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl"
-      >
-        <motion.div ref={refAnimation}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={fadeInLeftAnimation} className="grid grid-cols-2 md:col-span-3  lg:grid-cols-5 gap-y-16 gap-x-12">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <motion.div
+          ref={refAnimation}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeInLeftAnimation}
+          className="grid grid-cols-2 md:col-span-3  lg:grid-cols-5 gap-y-16 gap-x-12"
+        >
           <div className="col-span-2 md:col-span-3 lg:col-span-2 ">
             <img className="w-auto h-16" src={image} alt="" />
 
@@ -172,13 +172,15 @@ const Footer = () => {
           </div>
         </motion.div>
 
-
-        <motion.p ref={refAnimation}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={fadeInDownAnimation} className="text-sm text-center text-gray-200">
-        <hr className="mt-16 mb-10 border-gray-200" />
-          © Copyright {currentYear}, All Rights Reserved by Duct Buddy
+        <motion.p
+          ref={refAnimation}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeInDownAnimation}
+          className="text-sm text-center text-gray-200"
+        >
+          <hr className="mt-16 mb-10 border-gray-200" />© Copyright{" "}
+          {currentYear}, All Rights Reserved by Duct Buddy LLC
         </motion.p>
       </div>
     </section>

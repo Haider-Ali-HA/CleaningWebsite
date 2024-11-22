@@ -29,7 +29,7 @@ const CaseStudy = () => {
                   alt=" casestudy image 1"
                 />
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
-                  <h2 className="text-white text-2xl font-bold">Case Study </h2>
+                  
                   <Link
                     to="/resources/case-study-1"
                     className="text-white text-2xl font-bold text-center hover:underline"
@@ -47,9 +47,7 @@ const CaseStudy = () => {
                     alt="casestudy image 2"
                   />
                   <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <h2 className="text-white text-2xl font-bold">
-                      Case Study 2
-                    </h2>
+                    
                     <Link
                       to="/resources/case-study-2"
                       className="text-white text-2xl font-bold text-center hover:underline"
