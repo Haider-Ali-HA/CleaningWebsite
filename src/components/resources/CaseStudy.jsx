@@ -6,7 +6,7 @@ import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 
 const CaseStudy = () => {
-  const { fadeInLeftAnimation, fadeInRightAnimation } = useAnimations();
+  const { fadeInLeftAnimation, fadeInUpAnimation } = useAnimations();
   const refAnimationLeft = useRef(null);
   const refAnimationRight = useRef(null);
   const isInViewLeft = useInView(refAnimationLeft, { once: true });
@@ -63,7 +63,7 @@ const CaseStudy = () => {
               ref={refAnimationRight}
               initial="hidden"
               animate={isInViewRight ? "visible" : "hidden"}
-              variants={fadeInRightAnimation}
+              variants={fadeInUpAnimation}
               className="flex flex-col items-start xl:px-16"
             >
               <h2 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl">

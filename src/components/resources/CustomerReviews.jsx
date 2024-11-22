@@ -3,7 +3,7 @@ import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 
 const CustomerReviews = () => {
-  const { fadeInLeftAnimation, fadeInRightAnimation } = useAnimations();
+  const { fadeInLeftAnimation, fadeInUpAnimation } = useAnimations();
   const refAnimation = useRef(null);
   const isInView = useInView(refAnimation, { once: true });
 
@@ -37,7 +37,7 @@ const CustomerReviews = () => {
               ref={refAnimation}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              variants={fadeInRightAnimation}
+              variants={fadeInUpAnimation}
               class="relative pl-20 pr-6 sm:pl-6 md:px-0"
             >
               <div class="relative w-full  max-w-xs mt-4 mb-10 ml-auto">
