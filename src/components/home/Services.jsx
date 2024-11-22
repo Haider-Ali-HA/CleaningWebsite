@@ -25,7 +25,7 @@ const ServicesCard = () => {
         initial="hidden"
         animate={isInView  ? "visible" : "hidden"}
         variants={fadeInLeftAnimation} className="text-center mb-8">
-          <h2 className="text-3xl font-bold ">Our Services</h2>
+          <h2 className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl">Our Services</h2>
           <p className="mt-2 ">
             Explore our range of professional cleaning services designed for your home or office.
           </p>
