@@ -29,7 +29,7 @@ const BenefitsSection = ({ title, benefits }) => {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className=" shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 p-6 rounded-lg  text-center"
+            className=" shadow-[0px_0px_5px_#ffffff] border hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 p-6 rounded-lg  text-center"
           >
             <h3 className="font-semibold text-white text-lg mb-2">
               {benefit.title}
