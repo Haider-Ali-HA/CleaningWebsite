@@ -20,9 +20,9 @@ const CaseStudy = () => {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={fadeInLeftAnimation}
-              className="relative flex  flex-col  lg:flex-row   gap-6 mt-10 md:mt-0"
+              className="relative flex flex-col lg:flex-row gap-6 mt-10 md:mt-0"
             >
-              <div className="overflow-hidden aspect-w-3 aspect-h-4 relative">
+              <div className="overflow-hidden aspect-w-3 aspect-h-4 relative rounded-md">
                 <img
                   className="object-cover object-top w-full h-full origin-top scale-150 opacity-50"
                   src={Image1}
@@ -32,32 +32,30 @@ const CaseStudy = () => {
                   
                   <Link
                     to="/resources/case-study-1"
-                    className="text-white text-2xl font-bold text-center hover:underline"
+                    className="text-white px-1 text-2xl font-bold text-center hover:underline"
                   >
-                    St. Peter's College{" "}
+                    Clean Air Solutions Inc.
                   </Link>
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="h-full overflow-hidden aspect-w-3 aspect-h-4 relative">
-                  <img
-                    className="object-cover object-top w-full h-full origin-top scale-150 opacity-50"
-                    src={Image2}
-                    alt="casestudy image 2"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center flex-col">
+              <div className="relative overflow-hidden aspect-w-3 aspect-h-4 rounded-md">
+                <img
+                  className="object-cover object-top w-full h-full origin-top scale-150 opacity-50"
+                  src={Image2}
+                  alt="casestudy image 2"
+                />
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
                     
                     <Link
                       to="/resources/case-study-2"
-                      className="text-white text-2xl font-bold text-center hover:underline"
+                      className="text-white px-1 text-2xl font-bold text-center hover:underline"
                     >
-                      The Atlantic City Fire Department
+                      Fresh Breeze Duct Cleaning
                     </Link>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
             <motion.div
               ref={refAnimation}

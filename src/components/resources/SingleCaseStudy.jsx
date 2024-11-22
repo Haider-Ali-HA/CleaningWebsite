@@ -1,32 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Image1 from "../../assets/resources/casestudy1.jpg";
 import Image2 from "../../assets/resources/casestudy2.jpg";
 import Navbar from "../common/Navbar";
 import Hero from "../common/Hero";
 import Image from "../../assets/about/about.jpg"; // Adjusted image path
+import { useAnimations } from "../../context/Animations";
+import { useInView, motion } from "framer-motion";
 
 const CaseStudy1 = {
-  title: "St. Peter’s College",
+  title: "Clean Air Solutions Inc.",
   point1:
-    "The faculty and students of St. Peter’s College requested our air duct cleaning service after they became more fully aware of the importance of indoor air quality. For buildings with a lot of daily traffic, such as schools and colleges, cleaning and maintaining the ductwork is essential.",
+    "St. Peter’s College requested our air duct cleaning service to improve indoor air quality. Cleaning and maintaining the ductwork is essential for buildings with a lot of daily traffic.",
   point2:
-    "We knew it was important to complete our cleaning without interrupting the start of the upcoming school semester. So Duct Dudes provided service day and night, seven days a week. A full-source removal cleaning was provided for all ductwork. When we were finished, air quality testing was administered and confirmed what we already knew: Our work significantly improved this important indoor space.",
+    "We completed our cleaning without interrupting the school semester, providing service day and night. Air quality testing confirmed significant improvement.",
   point3:
-    "At Duct Dudes, we have a real soft spot for educators and their students and believe they should have the healthiest and safest learning environments possible. We are grateful that we were given this challenging and rewarding opportunity to do our part to help improve the indoor air quality of this great institution.",
+    "We believe educators and students deserve the healthiest learning environments. We are grateful for the opportunity to improve the indoor air quality of this institution.",
   Image: Image1,
 };
 
 const CaseStudy2 = {
-  title: "The Atlantic City Fire Department",
+  title: "Fresh Breeze Duct Cleaning",
   point1:
-    "Mold issues were discovered in the HVAC system and ductwork at the Atlantic City Fire Department. Environmentalists were consulted to conduct testing, which determined there were substantial and detrimental problems that were jeopardizing the health of the firefighters, EMTs and other building occupants.",
+    "Mold issues were discovered in the HVAC system and ductwork at the Atlantic City Fire Department, jeopardizing the health of the occupants.",
   point2:
-    "Duct Dudes provided our full-source removal cleaning on applicable, metal ductwork. We also provided replacement installations for the more porous and insulated ductwork. For more than two days and nights, our staff carried out the cleaning strategy provided by air systems cleaning specialist and company founder Tom Lachowicz.",
+    "We provided full-source removal cleaning on metal ductwork and replacement installations for porous ductwork. Our staff carried out the cleaning strategy over two days and nights.",
   point3:
-    "The environmentalists returned to conduct follow-up testing, and our work passed with flying colors.",
+    "Follow-up testing confirmed our work passed with flying colors.",
   point4:
-    "It was a tremendous honor to help improve living and working conditions for the brave members of the Atlantic City Fire Department.",
+    "It was an honor to improve living and working conditions for the brave members of the Atlantic City Fire Department.",
   Image: Image2,
 };
 
@@ -40,6 +42,9 @@ const SingleCaseStudy = () => {
   const location = useLocation();
   const path = location.pathname;
   let caseStudy;
+  const { fadeInLeftAnimation, fadeInUpAnimation,fadeInRightAnimation } = useAnimations();
+  const refAnimation = useRef(null);
+  const isInView = useInView(refAnimation, { once: true });
 
   if (path === "/resources/case-study-1") {
     caseStudy = CaseStudy1;
@@ -52,29 +57,41 @@ const SingleCaseStudy = () => {
   return (
     <div>
       <Navbar />
-    <Hero
-      title="Resources"
-      description="Restore your property to its original state with our expert fire restoration services."
-      Image={Image} // Adjusted image usage
-    />
+      <Hero
+        title="Resources"
+        description="Restore your property to its original state with our expert fire restoration services."
+        Image={Image} // Adjusted image usage
+      />
       <section className="py-10 sm:py-16 lg:py-24 ">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="mx-auto text-left md:max-w-lg lg:max-w-2xl md:text-center">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">
+            <motion.h2
+              ref={refAnimation}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={fadeInUpAnimation}
+              className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight"
+            >
               Case Study
-            </h2>
+            </motion.h2>
           </div>
 
-          <div className="grid grid-cols-1 mt-8 md:mt-20 gap-y-6 md:grid-cols-2 gap-x-10">
-            <div>
+          <div className="grid grid-cols-1 items-center mt-8 md:mt-20 gap-y-6 md:grid-cols-2 gap-x-10">
+            <motion.div    ref={refAnimation}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={fadeInLeftAnimation}>
               <img
                 className="w-full mx-auto "
                 src={caseStudy.Image}
                 alt={caseStudy.title}
               />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div    ref={refAnimation}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={fadeInRightAnimation}>
               <h3 className="text-2xl font-semibold text-primary">
                 {caseStudy.title}
               </h3>
@@ -91,9 +108,11 @@ const SingleCaseStudy = () => {
                 <p className="mt-4 text-lg text-gray-200">{caseStudy.point4}</p>
               )}
               {caseStudy.description && (
-                <p className="mt-4 text-lg text-gray-200">{caseStudy.description}</p>
+                <p className="mt-4 text-lg text-gray-200">
+                  {caseStudy.description}
+                </p>
               )}
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
