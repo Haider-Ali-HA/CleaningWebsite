@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import Image from "../../assets/logo-2.svg";
+import { useAnimations } from "../../context/Animations";
+import { useInView, motion } from "framer-motion";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   let dropdownTimeout = null; // Timeout for desktop hover delay
+
+  const { fadeInRightAnimation,fadeInLeftAnimation } = useAnimations();
+  const refAnimation = useRef(null);
+  const isInView = useInView(refAnimation, { once: true });
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -56,8 +62,14 @@ const Navbar = () => {
       label: "Dryer Vent Cleaning",
       path: "/dryer-vent",
       sublinks: [
-        { label: "Residential Dryer Vent Cleaning", path: "/dryer-vent/residential" },
-        { label: "Commercial Dryer Vent Cleaning", path: "/dryer-vent/commercial" },
+        {
+          label: "Residential Dryer Vent Cleaning",
+          path: "/dryer-vent/residential",
+        },
+        {
+          label: "Commercial Dryer Vent Cleaning",
+          path: "/dryer-vent/commercial",
+        },
         { label: "Exterior Bird Guard", path: "/dryer-vent/bird-guard" },
       ],
     },
@@ -79,7 +91,6 @@ const Navbar = () => {
     {
       label: "Resources",
       path: "/resources",
-      
     },
     { label: "Contact", path: "/contact" },
   ];
@@ -91,11 +102,20 @@ const Navbar = () => {
       } shadow-lg z-30`}
     >
       <div className="px-4 mx-auto w-5/6 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-20">
+        <nav
+          
+          className="flex items-center justify-between h-20"
+        >
           {/* Logo */}
-          <NavLink to="/" className="font-bold text-lg lg:text-3xl text-white">
+          <motion.div ref={refAnimation}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeInLeftAnimation}>
+
+          <NavLink  to="/" className="font-bold text-lg lg:text-3xl text-white">
             <img src={Image} className="w-auto h-12 lg:h-24 lg:mt-16" alt="" />
           </NavLink>
+            </motion.div>
 
           {/* Hamburger Menu Button */}
           <button
@@ -137,7 +157,13 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Navbar */}
-          <div className="hidden xl:flex lg:items-center lg:space-x-5 text-white">
+          <motion.div
+            ref={refAnimation}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={fadeInRightAnimation}
+            className="hidden xl:flex lg:items-center lg:space-x-5 text-white"
+          >
             {links.map((item, index) => (
               <div
                 key={index}
@@ -186,12 +212,14 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-          </div>
+          </motion.div>
         </nav>
 
         {/* Mobile Navbar */}
         <div
-          className={`xl:hidden ${menuOpen ? "mt-5" : "-mt-5"} bg-white text-black p-4 rounded-lg shadow-md overflow-hidden transition-all duration-300 ${
+          className={`xl:hidden ${
+            menuOpen ? "mt-5" : "-mt-5"
+          } bg-white text-black p-4 rounded-lg shadow-md overflow-hidden transition-all duration-300 ${
             menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
         >

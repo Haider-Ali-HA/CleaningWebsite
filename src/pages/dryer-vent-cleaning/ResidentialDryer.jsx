@@ -3,8 +3,10 @@ import Navbar from "../../components/common/Navbar";
 import Hero from "../../components/common/Hero";
 import Image from "../../assets/about/about.jpg"; // Adjusted image path
 import OurServiceAreaData from "../../components/about-us/OurServiceAreaData";
-import GoogleReviews from "../../components/common/GoogleReviews";
 import ResidentialImage from "../../assets/dryer-vent-cleaning/residential-dryer-vent-cleaning.jpg"; // Adjusted image path
+import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
+import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
+import ProcessSection from "../../components/common/all-services-section/ProcessSection";
 
 const data = [
   {
@@ -47,6 +49,29 @@ const benefits = [
   },
 ];
 
+const processSteps = [
+  {
+    title: "Initial Inspection",
+    description:
+      "We assess your dryer vent system to identify any issues.",
+  },
+  {
+    title: "Thorough Cleaning",
+    description:
+      "Our technicians use specialized tools to remove lint and debris.",
+  },
+  {
+    title: "System Optimization",
+    description:
+      "We ensure your dryer vent system is optimized for maximum efficiency.",
+  },
+  {
+    title: "Final Inspection",
+    description:
+      "A final check to ensure everything is clean and functioning properly.",
+  },
+];
+
 const ResidentialDryer = () => {
   return (
     <div>
@@ -59,100 +84,34 @@ const ResidentialDryer = () => {
       <div className="bg-gray-50 text-gray-800">
         {/* Introduction Section */}
         <section className="py-16 px-8 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Keep Your Home Safe and Efficient
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <p className="text-gray-200">
-              Our{" "}
-              <span className="font-semibold">
-                Residential Dryer Vent Cleaning Service
-              </span>{" "}
-              is designed to ensure your home is safe and your dryer operates at
-              peak efficiency.
-              <br />
-              <br />
-              Using advanced technology and a thorough approach, we remove lint
-              and debris to prevent fires and improve dryer performance.
-            </p>
-            <img
-              src={ResidentialImage}
-              alt="Residential Dryer Vent Cleaning"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+          <IntroductionSection
+            title="Keep Your Home Safe and Efficient"
+            description1="Our Residential Dryer Vent Cleaning Service is designed to ensure your home is safe and your dryer operates at peak efficiency."
+            description2="Using advanced technology and a thorough approach, we remove lint and debris to prevent fires and improve dryer performance."
+            image={ResidentialImage}
+          />
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-5 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Why Choose Our Dryer Vent Cleaning Service?
-          </h2>
-          <div className="flex flex-col lg:flex-row  gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className=" p-6 rounded-lg  shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 text-center"
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <BenefitsSection
+            title="Why Choose Our Dryer Vent Cleaning Service?"
+            benefits={benefits}
+          />
         </section>
 
         {/* Process Section */}
         <section className="py-16 bg-[#0B1215] px-8">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Our Comprehensive Cleaning Process
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <ul className="list-disc pl-6 space-y-4 text-primary">
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Initial Inspection
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We assess your dryer vent system to identify any issues.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Thorough Cleaning
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  Our technicians use specialized tools to remove lint and
-                  debris.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  System Optimization
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We ensure your dryer vent system is optimized for maximum
-                  efficiency.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Final Inspection
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  A final check to ensure everything is clean and functioning
-                  properly.
-                </p>
-              </li>
-            </ul>
-          </div>
+          <ProcessSection
+            title="Our Comprehensive Cleaning Process"
+            processSteps={processSteps}
+          />
         </section>
 
         {/* FAQ Section */}
         <section className="bg-[#0B1215]">
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
-
-      
       </div>
     </div>
   );

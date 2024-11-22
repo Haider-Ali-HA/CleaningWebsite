@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import SocialLinks from "./SocialLinks";
 import image from "../../assets/logo-2.svg";
 import { IoMdCall } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useAnimations } from "../../context/Animations";
+import { useInView, motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { fadeInLeftAnimation,fadeInDownAnimation } = useAnimations();
+  const refAnimation = useRef(null);
+  const isInView = useInView(refAnimation, { once: true });
+
   return (
     <section className="py-10 bg-[#0f191d]  sm:pt-16 lg:pt-24">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-2 md:col-span-3  lg:grid-cols-5 gap-y-16 gap-x-12">
+      <div
+        
+        className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl"
+      >
+        <motion.div ref={refAnimation}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={fadeInLeftAnimation} className="grid grid-cols-2 md:col-span-3  lg:grid-cols-5 gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 ">
-            <img
-              className="w-auto h-16"
-              src={image}
-              alt=""
-            />
+            <img className="w-auto h-16" src={image} alt="" />
 
             <p className="text-base leading-relaxed text-gray-300 w-3/4 mt-7">
               Duct Buddy is the brainchild of Tom Lachowicz, who began his
@@ -37,8 +45,7 @@ const Footer = () => {
             <ul className="mt-6 space-y-4">
               <li>
                 <Link
-                 
-                 to="/"
+                  to="/"
                   title=""
                   className="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
@@ -49,7 +56,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                 to="/about"
+                  to="/about"
                   title=""
                   className="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
@@ -71,7 +78,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                 to="/contact"
+                  to="/contact"
                   title=""
                   className="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
@@ -101,7 +108,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                 to="/dryer-vent/residential"
+                  to="/dryer-vent/residential"
                   title=""
                   className="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
@@ -139,40 +146,40 @@ const Footer = () => {
             </p>
 
             <ul className="mt-6 space-y-4 ">
-              <li >
+              <li>
                 <Link
-                 to="https://maps.app.goo.gl/CrEJPnyv9mNHmN4t8"
+                  to="https://maps.app.goo.gl/CrEJPnyv9mNHmN4t8"
                   title=""
                   className="flex text-base  w-full gap-3 text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
-                <FaMapMarkedAlt className="text-4xl"/>
-                  {" "}
-                  110 Laidlaw Ave, Jersey City, NJ 07306, United States
+                  <FaMapMarkedAlt className="text-4xl" /> 110 Laidlaw Ave,
+                  Jersey City, NJ 07306, United States
                 </Link>
               </li>
 
               <li>
                 <Link
-               to="tel:+15512555709"
+                  to="tel:+15512555709"
                   title=""
                   className="flex text-base  w-full gap-3 text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
-                <IoMdCall className="text-2xl" />
-                +15512555709
+                  <IoMdCall className="text-2xl" />
+                  +15512555709
                 </Link>
               </li>
-
-              
             </ul>
           </div>
-        </div>
+        </motion.div>
 
+
+        <motion.p ref={refAnimation}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={fadeInDownAnimation} className="text-sm text-center text-gray-200">
         <hr className="mt-16 mb-10 border-gray-200" />
-
-        <p className="text-sm text-center text-gray-200">
           © Copyright {currentYear}, All Rights Reserved by Duct Buddy
-        </p>
+        </motion.p>
       </div>
     </section>
   );

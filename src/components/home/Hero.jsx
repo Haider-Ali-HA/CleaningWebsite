@@ -1,11 +1,11 @@
-import React, {useRef,useState}from "react";
+import React, { useRef } from "react";
 import Navbar from "../common/Navbar";
 import newimage from "../../assets/home/img.jpg";
 import SocialLinks from "../common/SocialLinks";
-import { motion,  useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useAnimations } from "../../context/Animations";
 const Hero = () => {
-  const {fadeInRightAnimation} =useAnimations();
+  const { fadeInLeftAnimation } = useAnimations();
   const refAnimation = useRef(null);
   const isInView = useInView(refAnimation, { once: true });
 
@@ -22,10 +22,13 @@ const Hero = () => {
 
         {/* Other elements can be added here */}
       </div>
-      <motion.div ref={refAnimation}
+      <motion.div
+        ref={refAnimation}
         initial="hidden"
-        animate={isInView  ? "visible" : "hidden"}
-        variants={fadeInRightAnimation} className="text-white relative   flex flex-col h-full items-center    justify-center w-full">
+        animate={isInView ? "visible" : "hidden"}
+        variants={fadeInLeftAnimation}
+        className="text-white relative   flex flex-col h-full items-center    justify-center w-full"
+      >
         <div className=" w-3/4 flex flex-col gap-5 mt-20 sm:mt-12  lg:mt-20 items-start">
           <h1 className="text-4xl lg:text-6xl font-semibold">
             Duct Buddy: The Best Duct Cleaning Company - Bar None!
@@ -42,7 +45,6 @@ const Hero = () => {
           <div className="  flex  gap-2">
             <SocialLinks />
           </div>
-           
         </div>
       </motion.div>
     </div>

@@ -3,8 +3,10 @@ import Navbar from "../components/common/Navbar";
 import Hero from "../components/common/Hero";
 import Image from "../assets/about/about.jpg"; // Adjusted image path
 import OurServiceAreaData from "../components/about-us/OurServiceAreaData";
-import GoogleReviews from "../components/common/GoogleReviews";
 import PtacImage from "../assets/ptac-cleaning/ptac-cleaning.jpg"; // Adjusted image path
+import IntroductionSection from "../components/common/all-services-section/IntroductionSection";
+import BenefitsSection from "../components/common/all-services-section/BenefitsSection";
+import ProcessSection from "../components/common/all-services-section/ProcessSection";
 
 const data = [
   {
@@ -47,6 +49,28 @@ const benefits = [
   },
 ];
 
+const processSteps = [
+  {
+    title: "Initial Inspection",
+    description:
+      "We inspect your PTAC units to identify any issues and determine the best cleaning approach.",
+  },
+  {
+    title: "Deep Cleaning",
+    description:
+      "Our technicians use specialized equipment to thoroughly clean your PTAC units.",
+  },
+  {
+    title: "Sanitization",
+    description: "We sanitize the units to eliminate any bacteria or mold.",
+  },
+  {
+    title: "Final Inspection",
+    description:
+      "A detailed inspection ensures your PTAC units are clean and functioning optimally.",
+  },
+];
+
 const PtacCleaning = () => {
   return (
     <div>
@@ -59,98 +83,34 @@ const PtacCleaning = () => {
       <div className="bg-gray-50 text-gray-800">
         {/* Introduction Section */}
         <section className="py-16 px-8 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Professional PTAC Cleaning Services
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <p className="text-gray-200">
-              Our <span className="font-semibold">PTAC Cleaning Service</span>{" "}
-              is designed to improve the air quality and efficiency of your PTAC
-              units. We specialize in thorough cleaning and maintenance to
-              ensure your units perform at their best.
-              <br />
-              <br />
-              Using advanced technology and a meticulous approach, we ensure
-              your PTAC units are clean and efficient.
-            </p>
-            <img
-              src={PtacImage}
-              alt="PTAC Cleaning"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+          <IntroductionSection
+            title="Professional PTAC Cleaning Services"
+            description1="Our PTAC Cleaning Service is designed to improve the air quality and efficiency of your PTAC units. We specialize in thorough cleaning and maintenance to ensure your units perform at their best."
+            description2="Using advanced technology and a meticulous approach, we ensure your PTAC units are clean and efficient."
+            image={PtacImage}
+          />
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-5 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Why Choose Our PTAC Cleaning Service?
-          </h2>
-          <div className="flex flex-col lg:flex-row  gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className=" p-6 rounded-lg  shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 text-center"
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <BenefitsSection
+            title="Why Choose Our PTAC Cleaning Service?"
+            benefits={benefits}
+          />
         </section>
 
         {/* Process Section */}
         <section className="py-16 bg-[#0B1215] px-8">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Our PTAC Cleaning Process
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <ul className="list-disc pl-6 space-y-4 text-primary">
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Initial Inspection
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We inspect your PTAC units to identify any issues and
-                  determine the best cleaning approach.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Deep Cleaning
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  Our technicians use specialized equipment to thoroughly clean
-                  your PTAC units.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Sanitization
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We sanitize the units to eliminate any bacteria or mold.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Final Inspection
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  A detailed inspection ensures your PTAC units are clean and
-                  functioning optimally.
-                </p>
-              </li>
-            </ul>
-          </div>
+          <ProcessSection
+            title="Our PTAC Cleaning Process"
+            processSteps={processSteps}
+          />
         </section>
 
         {/* FAQ Section */}
         <section className="bg-[#0B1215]">
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
-
-       
       </div>
     </div>
   );

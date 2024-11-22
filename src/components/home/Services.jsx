@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image1 from "../../assets/home/airDuctCleaning.jpg";
 import Image2 from "../../assets/home/dryerVentCleaning.jpg";
 import Image3 from "../../assets/home/ptacCleaning.jpg";
 import Image4 from "../../assets/home/restoration.jpg";
 import { Link } from "react-router-dom";
+import { useAnimations } from "../../context/Animations";
+import { useInView,motion  } from "framer-motion";
 
 const services = [
   { id: 1, name: "Air Duct Cleaning", description: "Improve air quality and system efficiency. Professional air duct cleaning services.", image: Image1, path: "/air-duct/commercial" },
@@ -13,16 +15,25 @@ const services = [
 ];
 
 const ServicesCard = () => {
+  const {fadeInLeftAnimation ,fadeInDownAnimation} =useAnimations();
+  const refAnimation = useRef(null);
+  const isInView = useInView(refAnimation, { once: true });
   return (
     <section className="py-10 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <motion.div ref={refAnimation}
+        initial="hidden"
+        animate={isInView  ? "visible" : "hidden"}
+        variants={fadeInLeftAnimation} className="text-center mb-8">
           <h2 className="text-3xl font-bold ">Our Services</h2>
           <p className="mt-2 ">
             Explore our range of professional cleaning services designed for your home or office.
           </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+        </motion.div>
+        <motion.div ref={refAnimation}
+        initial="hidden"
+        animate={isInView  ? "visible" : "hidden"}
+        variants={fadeInDownAnimation} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
           {services.map((service) => (
             <div
               key={service.id}
@@ -52,7 +63,10 @@ const ServicesCard = () => {
               </Link>
             </div>
           ))}
-        </div>
+
+        </motion.div>
+
+        
       </div>
       
     </section>

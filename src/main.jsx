@@ -8,10 +8,9 @@ import { AnimationsProvider } from "./context/Animations.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AnimationsProvider>
-
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </AnimationsProvider>
   </StrictMode>
 );

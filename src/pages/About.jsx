@@ -18,8 +18,8 @@ const About = () => {
         Image={Image} // Adjusted image usage
       />
       <WhyChooseUs />
-      <Career />
-      <IndustryWeServe />
+      {/* <Career /> */}
+      {/* <IndustryWeServe /> */}
       <MeetOurTeam />
       <OurServiceArea />
     </div>

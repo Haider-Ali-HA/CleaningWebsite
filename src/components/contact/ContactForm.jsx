@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useAnimations } from '../../context/Animations';
+import { useInView, motion } from 'framer-motion';
 
 const ContactForm = () => {
+  const { fadeInDownAnimation } = useAnimations();
+  const refAnimation = useRef(null);
+  const isInView = useInView(refAnimation, { once: true });
+
   return (
     <section className="py-10  sm:py-16 lg:py-24">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <motion.div   ref={refAnimation}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={fadeInDownAnimation} className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
           <div className="mt-6 overflow-hidden  text-black bg-white rounded-xl">
             <div className="px-6 py-12 sm:p-12">
@@ -104,7 +113,7 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

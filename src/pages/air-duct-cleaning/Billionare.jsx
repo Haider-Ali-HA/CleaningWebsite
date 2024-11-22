@@ -3,8 +3,10 @@ import Navbar from "../../components/common/Navbar";
 import Hero from "../../components/common/Hero";
 import Image from "../../assets/about/about.jpg"; // Adjusted image path
 import OurServiceAreaData from "../../components/about-us/OurServiceAreaData";
-import GoogleReviews from "../../components/common/GoogleReviews";
 import BillionareImage from "../../assets/air-duct-cleaning/billionare.jpg"; // Adjusted image path
+import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
+import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
+import ProcessSection from "../../components/common/all-services-section/ProcessSection";
 
 const data = [
   {
@@ -47,6 +49,27 @@ const benefits = [
   },
 ];
 
+const processSteps = [
+  {
+    title: "Personalized Consultation",
+    description: "We analyze your space and craft a bespoke cleaning strategy.",
+  },
+  {
+    title: "Deep Cleaning",
+    description:
+      "Our technicians use advanced techniques to eliminate every speck of dust.",
+  },
+  {
+    title: "Air Purification",
+    description:
+      "We install top-tier air filtration systems to keep your air pristine.",
+  },
+  {
+    title: "Post-Cleaning Assurance",
+    description: "A detailed inspection ensures your complete satisfaction.",
+  },
+];
+
 const Billionare = () => {
   return (
     <div>
@@ -59,101 +82,34 @@ const Billionare = () => {
       <div className="bg-gray-50 text-gray-800">
         {/* Introduction Section */}
         <section className="py-16 px-8 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Exclusivity Meets Excellence
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <p className="text-gray-200">
-              Our{" "}
-              <span className="font-semibold">
-                Billionaire Duct Cleaning Service
-              </span>{" "}
-              is designed for discerning clients who demand perfection. We
-              specialize in enhancing the air quality of luxury estates, private
-              jets, and high-end commercial properties.
-              <br />
-              <br />
-              Using cutting-edge technology and a white-glove approach, we
-              ensure your air ducts meet the highest standards of cleanliness
-              and performance.
-            </p>
-            <img
-              src={BillionareImage}
-              alt="Billionaire Duct Cleaning"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+          <IntroductionSection
+            title="Exclusivity Meets Excellence"
+            description1="Our Billionaire Duct Cleaning Service is designed for discerning clients who demand perfection. We specialize in enhancing the air quality of luxury estates, private jets, and high-end commercial properties."
+            description2="Using cutting-edge technology and a white-glove approach, we ensure your air ducts meet the highest standards of cleanliness and performance."
+            image={BillionareImage}
+          />
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-5 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Why Choose Billionaire Duct Cleaning?
-          </h2>
-          <div className="flex flex-col  lg:flex-row  gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="  shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 p-6 rounded-lg  text-center"
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <BenefitsSection
+            title="Why Choose Billionaire Duct Cleaning?"
+            benefits={benefits}
+          />
         </section>
 
         {/* Process Section */}
         <section className="py-16 bg-[#0B1215] px-8">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Our Signature Cleaning Process
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <ul className="list-disc pl-6 space-y-4 text-primary">
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Personalized Consultation
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We analyze your space and craft a bespoke cleaning strategy.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Deep Cleaning
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  Our technicians use advanced techniques to eliminate every
-                  speck of dust.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Air Purification
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We install top-tier air filtration systems to keep your air
-                  pristine.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Post-Cleaning Assurance
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  A detailed inspection ensures your complete satisfaction.
-                </p>
-              </li>
-            </ul>
-          </div>
+          <ProcessSection
+            title="Our Signature Cleaning Process"
+            processSteps={processSteps}
+          />
         </section>
 
         {/* FAQ Section */}
         <section className="bg-[#0B1215]">
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
-
-       
       </div>
     </div>
   );

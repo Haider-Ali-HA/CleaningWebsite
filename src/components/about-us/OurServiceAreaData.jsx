@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+import { useAnimations } from "../../context/Animations";
+import { useInView, motion } from "framer-motion";
 const OurServiceAreaData = ({ faqs, title }) => {
+  const { fadeInLeftAnimation, fadeInDownAnimation } = useAnimations();
+  const refAnimation = useRef(null);
+  const isInView = useInView(refAnimation, { once: true });
   const [activeIndex, setActiveIndex] = useState(null);
   console.log(faqs);
   const toggleFAQ = (index) => {
@@ -13,11 +18,23 @@ const OurServiceAreaData = ({ faqs, title }) => {
     <section className="py-10  text-white sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl">
+          <motion.h2
+            ref={refAnimation}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={fadeInLeftAnimation}
+            className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl"
+          >
             {title}
-          </h2>
+          </motion.h2>
         </div>
-        <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
+        <motion.div
+          ref={refAnimation}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeInDownAnimation}
+          className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16"
+        >
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -49,7 +66,7 @@ const OurServiceAreaData = ({ faqs, title }) => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

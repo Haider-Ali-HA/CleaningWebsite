@@ -3,8 +3,10 @@ import Navbar from "../../components/common/Navbar";
 import Hero from "../../components/common/Hero";
 import Image from "../../assets/about/about.jpg"; // Adjusted image path
 import OurServiceAreaData from "../../components/about-us/OurServiceAreaData";
-import GoogleReviews from "../../components/common/GoogleReviews";
 import WaterRestorationImage from "../../assets/restoration/water-restoration.jpg"; // Adjusted image path
+import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
+import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
+import ProcessSection from "../../components/common/all-services-section/ProcessSection";
 
 const data = [
   {
@@ -47,6 +49,34 @@ const benefits = [
   },
 ];
 
+const processSteps = [
+  {
+    title: "Initial Assessment",
+    description:
+      "We evaluate the extent of the damage and create a tailored restoration plan.",
+  },
+  {
+    title: "Water Extraction",
+    description:
+      "Our team uses powerful pumps and vacuums to remove standing water.",
+  },
+  {
+    title: "Drying and Dehumidification",
+    description:
+      "We use industrial-grade dehumidifiers and air movers to dry affected areas.",
+  },
+  {
+    title: "Cleaning and Sanitizing",
+    description:
+      "We clean and sanitize your property to remove any contaminants.",
+  },
+  {
+    title: "Restoration",
+    description:
+      "We repair and restore your property to its pre-damage condition.",
+  },
+];
+
 const WaterRestoration = () => {
   return (
     <div>
@@ -59,109 +89,34 @@ const WaterRestoration = () => {
       <div className="bg-gray-50 text-gray-800">
         {/* Introduction Section */}
         <section className="py-16 px-8 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Comprehensive Water Restoration Services
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <p className="text-gray-200">
-              Our{" "}
-              <span className="font-semibold">Water Restoration Service</span>{" "}
-              is designed to quickly and efficiently restore your property after
-              water damage. We specialize in mitigating damage, preventing mold
-              growth, and restoring your space to its original condition.
-              <br />
-              <br />
-              Using advanced technology and a meticulous approach, we ensure
-              your property is thoroughly dried and sanitized.
-            </p>
-            <img
-              src={WaterRestorationImage}
-              alt="Water Restoration"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+          <IntroductionSection
+            title="Comprehensive Water Restoration Services"
+            description1="Our Water Restoration Service is designed to quickly and efficiently restore your property after water damage. We specialize in mitigating damage, preventing mold growth, and restoring your space to its original condition."
+            description2="Using advanced technology and a meticulous approach, we ensure your property is thoroughly dried and sanitized."
+            image={WaterRestorationImage}
+          />
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-5 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Why Choose Our Water Restoration Service?
-          </h2>
-          <div className="flex flex-col lg:flex-row  gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className=" p-6 rounded-lg  shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 text-center"
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <BenefitsSection
+            title="Why Choose Our Water Restoration Service?"
+            benefits={benefits}
+          />
         </section>
 
         {/* Process Section */}
         <section className="py-16 bg-[#0B1215] px-8">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Our Water Restoration Process
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <ul className="list-disc pl-6 space-y-4 text-primary">
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Initial Assessment
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We evaluate the extent of the damage and create a tailored
-                  restoration plan.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Water Extraction
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  Our team uses powerful pumps and vacuums to remove standing
-                  water.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Drying and Dehumidification
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We use industrial-grade dehumidifiers and air movers to dry
-                  affected areas.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Cleaning and Sanitizing
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We clean and sanitize your property to remove any
-                  contaminants.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Restoration
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We repair and restore your property to its pre-damage
-                  condition.
-                </p>
-              </li>
-            </ul>
-          </div>
+          <ProcessSection
+            title="Our Water Restoration Process"
+            processSteps={processSteps}
+          />
         </section>
 
         {/* FAQ Section */}
         <section className="bg-[#0B1215]">
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
-
-       
       </div>
     </div>
   );

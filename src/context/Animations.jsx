@@ -3,7 +3,7 @@ import { createContext, useContext } from "react";
 const AnimationsContext = createContext();
 
 const AnimationsProvider = ({ children }) => {
-  const fadeInLeftAnimation = {
+  const fadeInRightAnimation = {
     hidden: {
       opacity: 0,
       x: 100,
@@ -17,7 +17,7 @@ const AnimationsProvider = ({ children }) => {
     },
   };
 
-  const fadeInRightAnimation = {
+  const fadeInLeftAnimation = {
     hidden: {
       opacity: 0,
       x: -100,
@@ -31,10 +31,25 @@ const AnimationsProvider = ({ children }) => {
     },
   };
 
-  const fadeInUpAnimation = {
+  const fadeInDownAnimation = {
     hidden: {
       opacity: 0,
       y: 100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.2,
+        duration: 1,
+      },
+    },
+  };
+
+  const fadeInUpAnimation = {
+    hidden: {
+      opacity: 0,
+      y: -100,
     },
     visible: {
       opacity: 1,
@@ -66,6 +81,7 @@ const AnimationsProvider = ({ children }) => {
         fadeInLeftAnimation,
         fadeInRightAnimation,
         fadeInUpAnimation,
+        fadeInDownAnimation,
         charactorVariant,
     }}>
       {children}

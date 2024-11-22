@@ -3,8 +3,10 @@ import Image from "../../assets/about/about.jpg"; // Adjusted image path
 import Navbar from "../../components/common/Navbar";
 import Hero from "../../components/common/Hero";
 import OurServiceAreaData from "../../components/about-us/OurServiceAreaData";
-import GoogleReviews from "../../components/common/GoogleReviews";
 import MoldRestorationImage from "../../assets/restoration/mold-restoration.jpg"; // Adjusted image path
+import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
+import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
+import ProcessSection from "../../components/common/all-services-section/ProcessSection";
 
 const data = [
   {
@@ -47,6 +49,29 @@ const benefits = [
   },
 ];
 
+const processSteps = [
+  {
+    title: "Damage Assessment",
+    description:
+      "We evaluate the extent of the mold growth and create a detailed remediation plan.",
+  },
+  {
+    title: "Containment",
+    description:
+      "Our team contains the affected area to prevent the spread of mold.",
+  },
+  {
+    title: "Mold Removal",
+    description:
+      "We use advanced techniques to remove mold completely and prevent future growth.",
+  },
+  {
+    title: "Cleaning and Sanitization",
+    description:
+      "We clean and sanitize all affected areas to ensure a safe and healthy environment.",
+  },
+];
+
 const MoldRestoration = () => {
   return (
     <div>
@@ -59,100 +84,34 @@ const MoldRestoration = () => {
       <div className="bg-gray-50 text-gray-800">
         {/* Introduction Section */}
         <section className="py-16 px-8 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Expert Mold Restoration Services
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <p className="text-gray-200">
-              Our{" "}
-              <span className="font-semibold">Mold Restoration Service</span> is
-              designed to help you recover from mold damage quickly and
-              efficiently. We specialize in restoring residential and commercial
-              properties to a safe and healthy state.
-              <br />
-              <br />
-              Using advanced technology and a meticulous approach, we ensure
-              your property is thoroughly cleaned and restored.
-            </p>
-            <img
-              src={MoldRestorationImage}
-              alt="Mold Restoration"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+          <IntroductionSection
+            title="Expert Mold Restoration Services"
+            description1="Our Mold Restoration Service is designed to help you recover from mold damage quickly and efficiently. We specialize in restoring residential and commercial properties to a safe and healthy state."
+            description2="Using advanced technology and a meticulous approach, we ensure your property is thoroughly cleaned and restored."
+            image={MoldRestorationImage}
+          />
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-5 bg-[#0B1215]">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Why Choose Our Mold Restoration Service?
-          </h2>
-          <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className=" p-6 rounded-lg  shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 text-center"
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <BenefitsSection
+            title="Why Choose Our Mold Restoration Service?"
+            benefits={benefits}
+          />
         </section>
 
         {/* Process Section */}
         <section className="py-16 bg-[#0B1215] px-8">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Our Mold Restoration Process
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <ul className="list-disc pl-6 space-y-4 text-primary">
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Damage Assessment
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We evaluate the extent of the mold growth and create a
-                  detailed remediation plan.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Containment
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  Our team contains the affected area to prevent the spread of
-                  mold.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Mold Removal
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We use advanced techniques to remove mold completely and
-                  prevent future growth.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Cleaning and Sanitization
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We clean and sanitize all affected areas to ensure a safe and
-                  healthy environment.
-                </p>
-              </li>
-            </ul>
-          </div>
+          <ProcessSection
+            title="Our Mold Restoration Process"
+            processSteps={processSteps}
+          />
         </section>
 
         {/* FAQ Section */}
         <section className="bg-[#0B1215]">
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
-
-        
       </div>
     </div>
   );

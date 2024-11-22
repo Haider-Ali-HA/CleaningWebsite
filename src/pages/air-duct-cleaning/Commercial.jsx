@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "../../assets/about/about.jpg"; // Adjusted image path
 import Navbar from "../../components/common/Navbar";
 import Hero from "../../components/common/Hero";
 import OurServiceAreaData from "../../components/about-us/OurServiceAreaData";
 import AirDuctCleaningImage from "../../assets/air-duct-cleaning/clean-air-duct.jpg"; // Adjusted image path
-import GoogleReviews from "../../components/common/GoogleReviews";
+import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
+import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
+import ProcessSection from "../../components/common/all-services-section/ProcessSection";
 
 const data = [
   {
@@ -50,6 +52,28 @@ const benefits = [
       "Meet health and safety standards with professional duct cleaning.",
   },
 ];
+
+const processSteps = [
+  {
+    title: "Comprehensive Inspection",
+    description:
+      "We assess your HVAC system and ducts to identify problem areas.",
+  },
+  {
+    title: "High-Powered Cleaning",
+    description: "Using advanced equipment, we remove dust, mold, and debris.",
+  },
+  {
+    title: "Detailed Finishing Touches",
+    description: "We sanitize your ducts and ensure top air quality standards.",
+  },
+  {
+    title: "Post-Service Inspection",
+    description:
+      "A final walkthrough to ensure satisfaction and system efficiency.",
+  },
+];
+
 const Commercial = () => {
   return (
     <div>
@@ -63,104 +87,41 @@ const Commercial = () => {
       <div className="bg-gray-50 text-gray-800">
         {/* Introduction Section */}
         <section className="py-16 px-8 bg-[#0B1215] ">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            A Clean Business Starts Here
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <p className="text-gray-200">
-              In a bustling workplace, your HVAC system is the unsung hero,
-              keeping your employees comfortable and your operations running
-              smoothly. But over time, dust, debris, and allergens can
-              accumulate in your air ducts, affecting air quality and even
-              increasing your energy bills.
-              <br />
-              <br />
-              Our{" "}
-              <span className="font-semibold">
-                Commercial Duct Cleaning Services
-              </span>{" "}
-              are designed to tackle these challenges head-on. Whether you're
-              managing an office, retail space, or industrial facility, our
-              expert team ensures your ducts are spotless, enhancing both air
-              quality and HVAC efficiency.
-            </p>
-            <img
-              src={AirDuctCleaningImage}
-              alt="Clean Air Ducts"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+          <IntroductionSection
+            title="A Clean Business Starts Here"
+            description1="In a bustling workplace, your HVAC system is the unsung hero,
+            keeping your employees comfortable and your operations running
+            smoothly. But over time, dust, debris, and allergens can accumulate
+            in your air ducts, affecting air quality and even increasing your
+            energy bills."
+            description2="Our Commercial Duct Cleaning Services are designed to tackle these
+            challenges head-on. Whether you're managing an office, retail space,
+            or industrial facility, our expert team ensures your ducts are
+            spotless, enhancing both air quality and HVAC efficiency."
+            image={AirDuctCleaningImage}
+          />
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-5 bg-[#0B1215] ">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Why Clean Air Matters for Your Business
-          </h2>
-          <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className=" shadow-[0px_0px_5px_#ffffff] hover:shadow-[0px_0px_10px_#91e012] transition-all duration-500 hover:scale-105 p-6 rounded-lg  text-center"
-              >
-                <h3 className="font-semibold text-white text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <BenefitsSection
+            title="Why Clean Air Matters for Your Business"
+            benefits={benefits}
+          />
         </section>
 
         {/* Process Section */}
         <section className="py-16 bg-[#0B1215] px-8">
-          <h2 className="text-3xl font-bold text-center text-primary mb-8">
-            Our Proven Cleaning Process
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <ul className="list-disc pl-6 space-y-4 text-primary">
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Comprehensive Inspection
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We assess your HVAC system and ducts to identify problem
-                  areas.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  High-Powered Cleaning
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  Using advanced equipment, we remove dust, mold, and debris.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Detailed Finishing Touches
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  We sanitize your ducts and ensure top air quality standards.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-white text-lg">
-                  Post-Service Inspection
-                </h3>
-                <p className="text-gray-400 mt-2">
-                  A final walkthrough to ensure satisfaction and system
-                  efficiency.
-                </p>
-              </li>
-            </ul>
-          </div>
+          <ProcessSection
+            title="    Our Proven Cleaning Process"
+            processSteps={processSteps}
+          />
         </section>
 
         {/* FAQ Section */}
         <section className="bg-[#0B1215]">
           <OurServiceAreaData faqs={data} title="Frequently Asked Questions" />
         </section>
-
-       
       </div>
     </div>
   );
