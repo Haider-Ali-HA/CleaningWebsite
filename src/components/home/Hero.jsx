@@ -31,7 +31,7 @@ const Hero = () => {
       >
         <div className=" w-3/4 flex flex-col gap-5 mt-20 sm:mt-12  lg:mt-20 items-start">
           <h1 className="text-4xl lg:text-6xl font-semibold">
-            Duct Buddy: The Best Duct Cleaning Company - Bar None!
+            Duct Buddy The Best Duct Cleaning Company
           </h1>
           <p className="lg:text-lg  tracking-wide md:w-5/6">
             We’re the No. 1 and superior air duct cleaning and dryer vent
