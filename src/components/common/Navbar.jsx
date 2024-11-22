@@ -108,15 +108,12 @@ const Navbar = () => {
             <div className="flex items-center justify-between h-20 lg:hidden">
               <img src={Image} className="w-auto h-12 lg:h-24 lg:mt-16" alt="Logo" />
             </div>
-            <motion.div
-              ref={refAnimation}
-              initial="visible"
-              animate={isInView ? "visible" : "hidden"}
-              variants={fadeInLeftAnimation}
+            <div
+              
               className="hidden lg:flex items-center justify-between h-20"
             >
               <img src={Image} className="w-auto h-12 lg:h-24 lg:mt-16" alt="Logo" />
-            </motion.div>
+            </div>
           </NavLink>
 
           {/* Hamburger Menu Button */}
@@ -159,11 +156,8 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Navbar */}
-          <motion.div
-            ref={refAnimation}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInRightAnimation}
+          <div
+            
             className="hidden xl:flex lg:items-center lg:space-x-5 text-white"
           >
             {links.map((item, index) => (
@@ -214,7 +208,7 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-          </motion.div>
+          </div>
         </nav>
 
         {/* Mobile Navbar */}
