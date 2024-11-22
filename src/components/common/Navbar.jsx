@@ -10,9 +10,9 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   let dropdownTimeout = null; // Timeout for desktop hover delay
 
-  const { fadeInRightAnimation,fadeInLeftAnimation } = useAnimations();
+  const { fadeInRightAnimation, fadeInLeftAnimation } = useAnimations();
   const refAnimation = useRef(null);
-  const isInView = useInView(refAnimation, { once: true });
+  const isInView = useInView(refAnimation, { once: true, triggerOnce: false });
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -102,20 +102,22 @@ const Navbar = () => {
       } shadow-lg z-30`}
     >
       <div className="px-4 mx-auto w-5/6 sm:px-6 lg:px-8">
-        <nav
-          
-          className="flex items-center justify-between h-20"
-        >
+        <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.div ref={refAnimation}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={fadeInLeftAnimation}>
-
-          <NavLink  to="/" className="font-bold text-lg lg:text-3xl text-white">
-            <img src={Image} className="w-auto h-12 lg:h-24 lg:mt-16" alt="" />
-          </NavLink>
+          <NavLink to="/" className="font-bold text-lg lg:text-3xl text-white">
+            <div className="flex items-center justify-between h-20 lg:hidden">
+              <img src={Image} className="w-auto h-12 lg:h-24 lg:mt-16" alt="Logo" />
+            </div>
+            <motion.div
+              ref={refAnimation}
+              initial="visible"
+              animate={isInView ? "visible" : "hidden"}
+              variants={fadeInLeftAnimation}
+              className="hidden lg:flex items-center justify-between h-20"
+            >
+              <img src={Image} className="w-auto h-12 lg:h-24 lg:mt-16" alt="Logo" />
             </motion.div>
+          </NavLink>
 
           {/* Hamburger Menu Button */}
           <button
