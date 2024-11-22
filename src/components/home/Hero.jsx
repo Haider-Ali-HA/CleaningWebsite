@@ -10,7 +10,7 @@ const Hero = () => {
   const isInView = useInView(refAnimation, { once: true });
 
   return (
-    <div className="h-full sm:h-screen w-full relative text-white py-10">
+    <div className="h-screen w-full relative text-white py-10">
       <img
         src={newimage}
         alt="Hero Background"
