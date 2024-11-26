@@ -11,12 +11,13 @@ const CustomerReviews = () => {
     <>
       <section class="py-10  sm:py-16 lg:py-24 mt-10">
         <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-          <div class="grid items-center grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-20">
+          <div class="flex flex-col items-center    gap-y-6 lg:flex-row">
             <motion.div
               ref={refAnimation}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={fadeInLeftAnimation}
+               className="w-full xl:w-3/4 px-2 sm:px-14 "
             >
               <h2 class="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl">
                 Customer Review

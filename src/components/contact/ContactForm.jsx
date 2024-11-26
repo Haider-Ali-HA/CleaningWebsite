@@ -14,24 +14,24 @@ const ContactForm = () => {
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event) => {
-    //   event.preventDefault();
-    //   setResult("Sending....");
-    //   const formData = new FormData(event.target);
-    //   formData.append("access_key", "63c9178a-06ef-4dc2-aea6-13926f4f5d99");
-    //   const response = await fetch("https://api.web3forms.com/submit", {
-    //     method: "POST",
-    //     body: formData,
-    //   });
-    //   const data = await response.json();
-    //   if (data.success) {
-    //     setResult("");
-    //     toast.success("Form Submitted Successfully");
-    //     event.target.reset();
-    //   } else {
-    //     console.log("Error", data);
-    //     toast.error(data.message);
-    //     setResult("");
-    //   }
+      // event.preventDefault();
+      // setResult("Sending....");
+      // const formData = new FormData(event.target);
+      // formData.append("access_key", "");
+      // const response = await fetch("https://api.web3forms.com/submit", {
+      //   method: "POST",
+      //   body: formData,
+      // });
+      // const data = await response.json();
+      // if (data.success) {
+      //   setResult("");
+      //   toast.success("Form Submitted Successfully");
+      //   event.target.reset();
+      // } else {
+      //   console.log("Error", data);
+      //   toast.error(data.message);
+      //   setResult("");
+      // }
   };
 
   // Form submission end
