@@ -20,16 +20,16 @@ const FeatureAndBenefits = () => {
         <div className="absolute inset-0 bg-[#0f191d] opacity-90"></div>
       </div>
       <div className="relative w-full  px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse items-center    gap-y-6 lg:flex-row">
+        <div className="flex flex-col-reverse items-center   gap-y-6 lg:flex-row">
           <motion.div
             ref={refAnimation}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={fadeInUpAnimation}
           >
-            <div className="flex justify-center items-center ">
+            <div className="flex justify-center items-center  px-5 md:px-0 ">
               <img
-                className="rounded-md w-full px-5 sm:w-[29rem] lg:w-3/4"
+                className="rounded-xl w-full   sm:w-[29rem] lg:w-3/4"
                 src={Image}
                 alt="feature and benefits"
               />
@@ -40,7 +40,7 @@ const FeatureAndBenefits = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={fadeInRightAnimation}
-            className="w-full xl:w-3/4 px-2 sm:px-14 "
+            className="w-full  px-2 sm:pr-10 "
           >
             <h2 className="text-3xl font-bold leading-tight w-full text-primary sm:text-4xl lg:text-5xl">
               Feature and Benefit
