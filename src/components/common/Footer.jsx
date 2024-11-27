@@ -195,6 +195,7 @@ const Footer = () => {
             </ul>
           </motion.div>
         </div>
+        
 
         <motion.p
           ref={refAnimation5}
@@ -205,6 +206,7 @@ const Footer = () => {
         >
           <hr className="mt-16 mb-10 border-gray-200" />© Copyright{" "}
           {currentYear}, All Rights Reserved by Duct Buddy LLC
+          <p className="text-center w-full">Design and developed by Hexler tech</p>
         </motion.p>
       </div>
     </section>
