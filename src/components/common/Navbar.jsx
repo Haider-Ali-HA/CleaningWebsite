@@ -99,7 +99,7 @@ const Navbar = () => {
     <motion.header
       className={`fixed top-0 w-full  ${
         scrolled ? "bg-[#0f191d] bg-opacity-100" : "bg-[#0f191d] bg-opacity-70"
-      } shadow-lg z-30`}
+      } shadow-lg z-50`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
