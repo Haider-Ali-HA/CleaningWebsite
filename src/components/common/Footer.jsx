@@ -169,14 +169,14 @@ const Footer = () => {
               Contact Us
             </p>
 
-            <ul className="mt-6 space-y-4 ">
+            <ul className="mt-6 space-y-4  ">
               <li>
                 <Link
                   to="https://maps.app.goo.gl/CrEJPnyv9mNHmN4t8"
                   title=""
-                  className="flex text-base  w-full gap-3 text-gray-300 transition-all duration-200 hover:text-gray-500"
+                  className="flex text-base   w-full gap-3  text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
-                  <FaMapMarkedAlt className="text-4xl" /> 110 Laidlaw Ave,
+                  <FaMapMarkedAlt className="text-4xl  w-14" /> 110 Laidlaw Ave,
                   Jersey City, NJ 07306, United States
                 </Link>
               </li>
@@ -185,10 +185,10 @@ const Footer = () => {
                 <Link
                   to="tel:+15512555709"
                   title=""
-                  className="flex text-base  w-full gap-3 text-gray-300 transition-all duration-200 hover:text-gray-500"
+                  className="flex text-base  w-full gap-3  text-gray-300 transition-all duration-200 hover:text-gray-500"
                 >
                   {" "}
-                  <IoMdCall className="text-2xl" />
+                  <IoMdCall className="text-2xl  w-6" />
                   +15512555709
                 </Link>
               </li>
