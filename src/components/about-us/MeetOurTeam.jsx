@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import Image1 from "../../assets/about/team1.webp";
 import Image3 from "../../assets/about/team2.jpeg";
 import Image2 from "../../assets/about/team3.webp";
-import Image4 from "../../assets/about/team4.webp";
-import Image5 from "../../assets/about/team5.webp";
-import Image6 from "../../assets/about/team6.webp";
+// import Image4 from "../../assets/about/team4.webp";
+// import Image5 from "../../assets/about/team5.webp";
+// import Image6 from "../../assets/about/team6.webp";
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 const MeetOurTeam = () => {
@@ -18,9 +18,9 @@ const MeetOurTeam = () => {
     { image: Image1, name: "John Doe", description: "Oversees the overall direction of the company." },
     { image: Image2, name: "Jane Smith", description: "Leads the technology and engineering teams." },
     { image: Image3, name: "Alice Johnson", description: "Manages the company's finances." },
-    { image: Image4, name: "Bob Brown", description: "Ensures smooth operations across the company." },
-    { image: Image5, name: "Charlie Davis", description: "Heads the marketing strategies and campaigns." },
-    { image: Image6, name: "Eve Wilson", description: "Oversees the information technology strategy." },
+    // { image: Image4, name: "Bob Brown", description: "Ensures smooth operations across the company." },
+    // { image: Image5, name: "Charlie Davis", description: "Heads the marketing strategies and campaigns." },
+    // { image: Image6, name: "Eve Wilson", description: "Oversees the information technology strategy." },
   ];
 
   return (

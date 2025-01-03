@@ -10,7 +10,7 @@ const Contact = () => {
     <div>
       <Navbar />
       <Hero
-        title="Contact Duct Dudes"
+        title="Contact Duct Buddy"
         description="Feel free to contact us"
         Image={Image}
       />

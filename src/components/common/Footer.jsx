@@ -8,7 +8,7 @@ import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
   const { fadeInLeftAnimation } = useAnimations();
   const refAnimation1 = useRef(null);
   const refAnimation2 = useRef(null);
@@ -205,8 +205,8 @@ const Footer = () => {
           className="text-sm text-center text-gray-200"
         >
           <hr className="mt-16 mb-10 border-gray-200" />© Copyright{" "}
-          {currentYear}, All Rights Reserved by Duct Buddy LLC
-          <p className="text-center w-full">Design and developed by Hexler tech</p>
+          2024 , All Rights Reserved by Duct Buddy LLC
+          <p className="text-center w-full">Design and developed by <Link target="_blank" className="hover:underline" to="https://www.hexlertech.com/">Hexler tech</Link></p>
         </motion.p>
       </div>
     </section>
