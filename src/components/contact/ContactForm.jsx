@@ -233,8 +233,8 @@ const ContactForm = () => {
                         </option>
                         <option value="saw truck">Saw truck</option>
                         <option value="NADCA website">NADCA website</option>
-                        <option value="duct dudes website">
-                          Duct dudes website
+                        <option value="duct buddy website">
+                          Duct buddy website
                         </option>
                         <option value="billboards & signs">
                           Billboards & signs

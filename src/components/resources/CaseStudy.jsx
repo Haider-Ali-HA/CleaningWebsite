@@ -67,12 +67,12 @@ const CaseStudy = () => {
               className="flex flex-col items-start xl:px-16"
             >
               <h2 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl">
-                It's Another Open-and-Shut Case for the Dudes!
+                It's Another Open-and-Shut Case for the Buddy!
               </h2>
               <p className="mt-4 text-base leading-relaxed text-gray-200">
                 It doesn’t matter how tricky or challenging your air duct or
                 dryer vent cleaning project is. It doesn’t matter if it’s
-                residential, commercial or industrial. Duct Dudes uses its
+                residential, commercial or industrial. Duct Buddy uses its
                 superior training, extensive experience, extraordinary
                 specialization and top-of-the-line equipment to achieve the best
                 results possible for your unique space. We’ve pulled together a

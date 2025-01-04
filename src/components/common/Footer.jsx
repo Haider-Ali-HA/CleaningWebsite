@@ -206,7 +206,7 @@ const Footer = () => {
         >
           <hr className="mt-16 mb-10 border-gray-200" />© Copyright{" "}
           2024 , All Rights Reserved by Duct Buddy LLC
-          <p className="text-center w-full">Design and developed by <Link target="_blank" className="hover:underline" to="https://www.hexlertech.com/">Hexler tech</Link></p>
+          <p className="text-center w-full">Design and developed by <Link target="_blank" className="hover:underline" to="https://www.hexlertech.com/">Hexler tech Pvt Ltd.</Link></p>
         </motion.p>
       </div>
     </section>
