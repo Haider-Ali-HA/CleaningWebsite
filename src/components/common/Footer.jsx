@@ -2,10 +2,12 @@ import React, { useRef } from "react";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import SocialLinks from "./SocialLinks";
 import image from "../../assets/logo-2.svg";
+import Image from '../../assets/image1.png'
 import { IoMdCall } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
+
 
 const Footer = () => {
   // const currentYear = new Date().getFullYear();
@@ -33,7 +35,7 @@ const Footer = () => {
             variants={fadeInLeftAnimation}
             className="col-span-2 md:col-span-3 lg:col-span-2 "
           >
-            <img className="w-auto h-16" src={image} alt="" />
+            <img className="w-auto h-16" src={Image} alt="logo image" />
 
             <p className="text-base leading-relaxed text-gray-300 w-3/4 mt-7">
               Duct Buddy is the brainchild of Tom Lachowicz, who began his
@@ -206,7 +208,7 @@ const Footer = () => {
         >
           <hr className="mt-16 mb-10 border-gray-200" />© Copyright{" "}
           2024 , All Rights Reserved by Duct Buddy LLC
-          <p className="text-center w-full">Design and developed by <Link target="_blank" className="hover:underline" to="https://www.hexlertech.com/">Hexler tech Pvt Ltd.</Link></p>
+          <p className="text-center w-full">Design and developed by <Link target="_blank" className="hover:underline" to="https://www.hexlertech.com/">Hexler Tech Pvt Ltd.</Link></p>
         </motion.p>
       </div>
     </section>
