@@ -38,9 +38,9 @@ const Footer = () => {
             <img className="w-auto h-16" src={Image} alt="logo image" />
 
             <p className="text-base leading-relaxed text-gray-300 w-3/4 mt-7">
-              Duct Buddy is the brainchild of Tom Lachowicz, who began his
+              {/* Duct Buddy is the brainchild , who began his
               company as a part-time venture in New Jersey while working full
-              time in the IT field.
+              time in the IT field. */}
             </p>
 
             <div className="flex gap-3 my-5 w-full">

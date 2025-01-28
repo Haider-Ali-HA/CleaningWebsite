@@ -35,8 +35,9 @@ const Hero = () => {
           </h1>
           <p className="lg:text-lg  tracking-wide md:w-5/6">
             We’re the No. 1 and superior air duct cleaning and dryer vent
-            cleaning company in the New Jersey, New York City and Connecticut
-            areas. Why? Because it’s all we do—so we do it exceptionally well.
+            cleaning company in the New Jersey, and Connecticut
+            areas. 
+            {/* Why? Because it’s all we do—so we do it exceptionally well. */}
           </p>
           <button className="border border-primary hover:bg-transparent text-black hover:text-white hover:border-white transition-all duration-500 rounded bg-primary py-2  px-14 ">
             Learn More
