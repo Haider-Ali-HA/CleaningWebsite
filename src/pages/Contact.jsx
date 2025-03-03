@@ -14,6 +14,34 @@ const Contact = () => {
         <meta name="description" content="Reach out to Duct Buddy for professional air duct, dryer vent, and HVAC cleaning services in New Jersey And Connecticut. Contact us today to schedule an appointment and get your free quote." />
         <link rel="canonical" href="https://www.ductbuddyllc.com/contact" />
       </Helmet>
+      <Helmet>
+  {/* Your existing meta tags */}
+  
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact DuctBuddy LLC",
+        "description": "Get in touch with DuctBuddy for air duct cleaning, dryer vent cleaning and HVAC services in New Jersey and Connecticut.",
+        "mainEntity": {
+          "@type": "LocalBusiness",
+          "name": "DuctBuddy LLC",
+          "telephone": "+15512555709",
+          "email": "info@ductbuddyllc.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "110 Laidlaw Ave",
+            "addressLocality": "Jersey City",
+            "addressRegion": "NJ",
+            "postalCode": "07306",
+            "addressCountry": "US"
+          }
+        }
+      }
+    `}
+  </script>
+</Helmet>
       <Navbar />
       <Hero
         title="Contact DuctBuddy – Schedule Your Air Duct & Dryer Vent Cleaning in New Jersey & Connecticut"

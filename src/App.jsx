@@ -24,11 +24,89 @@ import FireRestoration from "./pages/restoration/FireRestoration";
 import WaterRestoration from "./pages/restoration/WaterRestoration";
 import About from "./pages/About";
 import Resources from "./pages/Resources";
+import { Helmet } from "react-helmet";
+
+
 
 
 const App = () => {
   return (
     <div>
+
+<Helmet>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "DuctBuddy LLC",
+        "image": "https://www.ductbuddyllc.com/assets/duct-buddy-logo.webp",
+        "url": "https://www.ductbuddyllc.com",
+        "telephone": "+15512555709",
+        "email": "info@ductbuddyllc.com",
+        "description": "Professional air duct cleaning, dryer vent cleaning, and HVAC maintenance in New Jersey and Connecticut, improving indoor air quality for homes and businesses.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "110 Laidlaw Ave",
+          "addressLocality": "Jersey City",
+          "addressRegion": "NJ",
+          "postalCode": "07306",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.7375,
+          "longitude": -74.0633
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/ductbuddyllc",
+          "https://www.instagram.com/ductbuddyllc"
+        ],
+        "areaServed": [
+          {
+            "@type": "State",
+            "name": "New Jersey"
+          },
+          {
+            "@type": "State",
+            "name": "Connecticut"
+          }
+        ],
+        "priceRange": "$$"
+      }
+    `}
+  </script>
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ductbuddyllc.com/" />
+  <meta property="og:title" content="DuctBuddy LLC - Air Duct & Dryer Vent Cleaning in NJ & CT" />
+  <meta property="og:description" content="Professional air duct cleaning, dryer vent cleaning, and HVAC maintenance services in New Jersey and Connecticut. Improve your indoor air quality today!" />
+  <meta property="og:image" content="https://www.ductbuddyllc.com/og-image.jpg" />
+  <meta property="og:site_name" content="DuctBuddy LLC" />
+  <meta property="og:locale" content="en_US" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.ductbuddyllc.com/" />
+  <meta name="twitter:title" content="DuctBuddy LLC - Air Duct & Dryer Vent Cleaning in NJ & CT" />
+  <meta name="twitter:description" content="Professional air duct cleaning, dryer vent cleaning, and HVAC maintenance services in New Jersey and Connecticut. Improve your indoor air quality today!" />
+  <meta name="twitter:image" content="https://www.ductbuddyllc.com/og-image.jpg" />
+</Helmet>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
