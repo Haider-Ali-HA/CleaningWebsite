@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import Image from "../../assets/about/about.jpg"; // Adjusted image path
+import Image from "../../assets/about/about.webp"; // Adjusted image path
 import Navbar from "../../components/common/Navbar";
 import Hero from "../../components/common/Hero";
 import OurServiceAreaData from "../../components/about-us/OurServiceAreaData";
-import AirDuctCleaningImage from "../../assets/air-duct-cleaning/clean-air-duct.jpg"; // Adjusted image path
+import AirDuctCleaningImage from "../../assets/air-duct-cleaning/clean-air-duct.webp"; // Adjusted image path
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
@@ -133,3 +133,4 @@ const Commercial = () => {
 };
 
 export default Commercial;
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../common/Navbar'
 import Hero from '../../common/Hero'
-import Image from "../../../assets/about/about.jpg"; // Adjusted image path
+import Image from "../../../assets/about/about.webp"; // Adjusted image path
 import { Outlet } from 'react-router-dom'
 
 const ResourceLayout = () => {
@@ -19,3 +19,4 @@ const ResourceLayout = () => {
 }
 
 export default ResourceLayout
+

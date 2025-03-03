@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Navbar from "../common/Navbar";
-import newimage from "../../assets/home/img.jpg";
+import newimage from "../../assets/home/img.webp";
 import SocialLinks from "../common/SocialLinks";
 import { motion, useInView } from "framer-motion";
 import { useAnimations } from "../../context/Animations";
@@ -55,3 +55,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

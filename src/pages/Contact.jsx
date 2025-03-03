@@ -3,7 +3,7 @@ import Navbar from "../components/common/Navbar";
 import ContactForm from "../components/contact/ContactForm";
 import Map from "../components/contact/Map";
 import Hero from "../components/common/Hero";
-import Image from "../assets/contact/contactUs.jpg";
+import Image from "../assets/contact/contactUs.webp";
 import { Helmet } from "react-helmet";
 
 const Contact = () => {

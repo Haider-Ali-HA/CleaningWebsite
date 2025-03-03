@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { useLocation } from "react-router-dom";
-import Image1 from "../../assets/resources/casestudy1.jpg";
-import Image2 from "../../assets/resources/casestudy2.jpg";
+import Image1 from "../../assets/resources/casestudy1.webp";
+import Image2 from "../../assets/resources/casestudy2.webp";
 import Navbar from "../common/Navbar";
 import Hero from "../common/Hero";
-import Image from "../../assets/about/about.jpg"; // Adjusted image path
+import Image from "../../assets/about/about.webp"; // Adjusted image path
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 
@@ -121,3 +121,4 @@ const SingleCaseStudy = () => {
 };
 
 export default SingleCaseStudy;
+

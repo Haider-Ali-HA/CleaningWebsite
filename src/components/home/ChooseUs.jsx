@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Image from "../../assets/home/chooseUs.jpg";
+import Image from "../../assets/home/chooseUs.webp";
 import { Link } from "react-router-dom";
 import { useAnimations } from "../../context/Animations";
 import { useInView,motion } from "framer-motion";

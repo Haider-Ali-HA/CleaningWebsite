@@ -44,7 +44,7 @@ const CustomerReviews = () => {
               <div class="relative w-full  max-w-xs mt-4 mb-10 ml-auto">
                 <img
                   class="ml-auto rounded-md"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/features/1/person.jpg"
+                  src="https://cdn.rareblocks.xyz/collection/celebration/images/features/1/person.webp"
                   alt=""
                 />
 

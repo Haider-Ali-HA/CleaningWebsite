@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import SocialLinks from "./SocialLinks";
 import image from "../../assets/logo-2.svg";
-import Image from '../../assets/image1.png'
+import Image from '../../assets/image1.webp'
 import { IoMdCall } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useAnimations } from "../../context/Animations";

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import Image1 from "../../assets/resources/casestudy1.jpg";
-import Image2 from "../../assets/resources/casestudy2.jpg";
+import Image1 from "../../assets/resources/casestudy1.webp";
+import Image2 from "../../assets/resources/casestudy2.webp";
 import { Link } from "react-router-dom";
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
@@ -88,3 +88,4 @@ const CaseStudy = () => {
 };
 
 export default CaseStudy;
+

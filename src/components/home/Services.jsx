@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import Image1 from "../../assets/home/airDuctCleaning.jpg";
-import Image2 from "../../assets/home/dryerVentCleaning.jpg";
-import Image3 from "../../assets/home/ptacCleaning.jpg";
-import Image4 from "../../assets/home/restoration.jpg";
+import Image1 from "../../assets/home/airDuctCleaning.webp";
+import Image2 from "../../assets/home/dryerVentCleaning.webp";
+import Image3 from "../../assets/home/ptacCleaning.webp";
+import Image4 from "../../assets/home/restoration.webp";
 import { Link } from "react-router-dom";
 import { useAnimations } from "../../context/Animations";
 import { useInView,motion  } from "framer-motion";
@@ -74,3 +74,4 @@ const ServicesCard = () => {
 };
 
 export default ServicesCard;
+

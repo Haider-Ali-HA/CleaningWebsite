@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import Image from "../../assets/image1.png";
+import Image from "../../assets/image1.webp";
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 

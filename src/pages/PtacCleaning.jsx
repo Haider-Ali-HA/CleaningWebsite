@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../components/common/Navbar";
 import Hero from "../components/common/Hero";
-import Image from "../assets/about/about.jpg"; // Adjusted image path
+import Image from "../assets/about/about.webp"; // Adjusted image path
 import OurServiceAreaData from "../components/about-us/OurServiceAreaData";
-import PtacImage from "../assets/ptac-cleaning/ptac-cleaning.jpg"; // Adjusted image path
+import PtacImage from "../assets/ptac-cleaning/ptac-cleaning.webp"; // Adjusted image path
 import IntroductionSection from "../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../components/common/all-services-section/ProcessSection";
@@ -124,3 +124,4 @@ const PtacCleaning = () => {
 };
 
 export default PtacCleaning;
+

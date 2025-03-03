@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
-import Image from "../../assets/home/feature-and-benefits.jpg";
-import BgImage from "../../assets/home/feature-and-benefits-bg.jpg";
+import Image from "../../assets/home/feature-and-benefits.webp";
+import BgImage from "../../assets/home/feature-and-benefits-bg.webp";
 
 const FeatureAndBenefits = () => {
   const { fadeInUpAnimation } = useAnimations();

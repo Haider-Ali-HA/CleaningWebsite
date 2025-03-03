@@ -4,7 +4,7 @@ import IndustryWeServe from "../components/about-us/IndustryWeServe";
 import MeetOurTeam from "../components/about-us/MeetOurTeam";
 import WhyChooseUs from "../components/about-us/WhyChooseUs";
 import Navbar from "../components/common/Navbar";
-import Image from "../assets/about/about.jpg"; // Adjusted image path
+import Image from "../assets/about/about.webp"; // Adjusted image path
 import Hero from "../components/common/Hero";
 import OurServiceArea from "../components/about-us/OurServiceArea";
 import { Helmet } from "react-helmet";

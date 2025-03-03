@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Image1 from "../../assets/about/team1.webp";
-import Image3 from "../../assets/about/team2.jpeg";
+import Image3 from "../../assets/about/team2.webp";
 import Image2 from "../../assets/about/team3.webp";
 // import Image4 from "../../assets/about/team4.webp";
 // import Image5 from "../../assets/about/team5.webp";

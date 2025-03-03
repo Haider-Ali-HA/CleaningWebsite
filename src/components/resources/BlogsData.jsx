@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Blog1 from "../../assets/resources/blog1.jpg";
-import Blog2 from "../../assets/resources/blog2.jpg";
-import Blog3 from "../../assets/resources/blog3.jpg";
-import Blog4 from "../../assets/resources/blog4.jpg";
+import Blog1 from "../../assets/resources/blog1.webp";
+import Blog2 from "../../assets/resources/blog2.webp";
+import Blog3 from "../../assets/resources/blog3.webp";
+import Blog4 from "../../assets/resources/blog4.webp";
 import { useAnimations } from "../../context/Animations";
 import { useInView, motion } from "framer-motion";
 
@@ -243,3 +243,4 @@ const BlogsData = () => {
 };
 
 export default BlogsData;
+

@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Navbar from "../components/common/Navbar";
 import Hero from "../components/common/Hero";
-import Image from "../assets/about/about.jpg";
+import Image from "../assets/about/about.webp";
 import CustomerReviews from "../components/resources/CustomerReviews";
 import GoogleReviews from "../components/common/GoogleReviews";
 import CaseStudy from "../components/resources/CaseStudy";
@@ -34,3 +34,4 @@ const Resources = () => {
 };
 
 export default Resources;
+
