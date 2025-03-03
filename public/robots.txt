@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+
+# Allow all bots to crawl essential content
+User-agent: Googlebot
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /resources
+Allow: /contact
+Allow: /air-duct/
+Allow: /dryer-vent/
+Allow: /ptac-cleaning/
+Allow: /restoration/
+
+# Point to sitemap
+Sitemap: https://www.ductbuddyllc.com/sitemap.xml
+
+# Crawl delay for heavy crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

@@ -126,4 +126,3 @@ const Billionare = () => {
 };
 
 export default Billionare;
-

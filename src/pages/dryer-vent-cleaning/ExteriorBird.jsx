@@ -126,4 +126,3 @@ const ExteriorBird = () => {
 };
 
 export default ExteriorBird;
-
