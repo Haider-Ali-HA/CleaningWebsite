@@ -19,8 +19,8 @@ const About = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="About Us"
-        description="Restore your property to its original state with our expert fire restoration services."
+        title="About DuctBuddy – Trusted Air Duct Cleaning & HVAC Maintenance Experts in New Jersey & Connecticut"
+        description="Learn why DuctBuddy is the <strong>trusted local expert for air duct and dryer vent cleaning in New Jersey and Connecticut</strong>. Our certified team has years of experience providing top-notch HVAC maintenance and improving <strong>indoor air quality</strong> for homes and businesses. We are committed to customer satisfaction, safety, and delivering cleaner, healthier air to our community."
         Image={Image} // Adjusted image usage
       />
       <WhyChooseUs />

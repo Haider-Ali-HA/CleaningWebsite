@@ -96,8 +96,8 @@ const WaterRestoration = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Water Restoration"
-        description="Restore your property with our expert water restoration services."
+        title="Water Damage Restoration Services in New Jersey & Connecticut – Fast Drying & Flood Cleanup"
+        description="Minimize damage from leaks or floods with DuctBuddy’s <strong>water damage restoration services in New Jersey and Connecticut</strong>. Our team provides 24/7 emergency water extraction, structural drying, and sanitization to prevent mold growth and further damage. We use industrial pumps and dehumidifiers to dry your property quickly, helping you recover faster and protect your <strong>indoor air quality</strong>."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

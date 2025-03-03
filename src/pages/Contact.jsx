@@ -16,8 +16,8 @@ const Contact = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Contact Duct Buddy"
-        description="Feel free to contact us"
+        title="Contact DuctBuddy – Schedule Your Air Duct & Dryer Vent Cleaning in New Jersey & Connecticut"
+        description="Ready to improve your indoor air quality? Get in touch with DuctBuddy for <strong>air duct cleaning, dryer vent service, or HVAC maintenance in New Jersey and Connecticut</strong>. We offer prompt responses and free estimates, ensuring you receive high-quality service when you need it. Contact us today to schedule your cleaning and <strong>breathe cleaner air</strong> in your home or business."
         Image={Image}
       />
       <Map />

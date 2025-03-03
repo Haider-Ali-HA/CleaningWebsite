@@ -86,8 +86,8 @@ const ResidentialDryer = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Residential Dryer Vent Cleaning"
-        description="Elevate your living environment with our exclusive billionaire-grade air duct cleaning service."
+        title="Residential Dryer Vent Cleaning in New Jersey & Connecticut – Prevent Fires & Improve Efficiency"
+        description="Protect your home from dryer fires with DuctBuddy’s <strong>residential dryer vent cleaning services in New Jersey and Connecticut</strong>. We thoroughly remove lint and debris from your dryer vents to improve drying efficiency and eliminate hazardous clogs. Regular dryer vent maintenance extends your dryer’s lifespan and safeguards your family by reducing fire risks and improving <strong>indoor air quality</strong>."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

@@ -85,8 +85,8 @@ const ExteriorBird = () => {
      </Helmet>
       <Navbar />
       <Hero
-        title="Exterior Bird Guard"
-        description="Protect your home with our high-quality exterior bird guards, designed to keep your vents free from nests and debris."
+        title="Exterior Bird Guard Installation in New Jersey & Connecticut – Keep Birds Out of Your Dryer Vents"
+        description="Safeguard your vents from pests with our <strong>exterior bird guard installation services in New Jersey and Connecticut</strong>. DuctBuddy installs durable covers on your dryer vent outlets to block birds, squirrels, and rodents from nesting inside. By keeping critters out, we prevent vent clogs and damage, ensuring your dryer exhausts safely and your indoor air stays clean."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

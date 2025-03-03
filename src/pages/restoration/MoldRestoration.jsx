@@ -92,8 +92,8 @@ const MoldRestoration = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Mold Restoration"
-        description="Restore your property to a safe and healthy state with our expert mold restoration services."
+        title="Mold Restoration Services in New Jersey & Connecticut – Expert Mold Remediation & Cleanup"
+        description="Get rid of hazardous mold with DuctBuddy’s <strong>mold restoration and remediation services in New Jersey and Connecticut</strong>. We locate and eliminate mold colonies in walls, attics, and HVAC systems, then thoroughly sanitize the area to prevent regrowth. Our experts address the moisture source and improve <strong>indoor air quality</strong>, making your space safe and healthy again."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

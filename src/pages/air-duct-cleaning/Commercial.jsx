@@ -85,9 +85,8 @@ const Commercial = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title=" Commercial Air Duct Cleaning"
-        description=" Professional commercial air duct cleaning to enhance air quality,
-              boost employee health, and improve HVAC efficiency."
+        title=" Commercial Air Duct Cleaning in New Jersey & Connecticut – Boost Indoor Air Quality at Your Business"
+        description=" Keep your workplace safe and productive with DuctBuddy’s <strong>commercial air duct cleaning services in New Jersey and Connecticut</strong>. We clean and sanitize HVAC systems in offices, retail stores, and commercial buildings to remove allergens, dust, and mold buildup. Our thorough service improves <strong>indoor air quality</strong> and HVAC efficiency, helping lower energy costs and promote a healthier environment for employees and customers."
         Image={Image} // Adjusted image usage
       />
       

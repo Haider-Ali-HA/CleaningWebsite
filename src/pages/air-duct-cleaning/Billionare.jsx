@@ -85,8 +85,8 @@ const Billionare = () => {
 
       <Navbar />
       <Hero
-        title="Billionare Air Duct Cleaning"
-        description="Elevate your living environment with our exclusive billionaire-grade air duct cleaning service."
+        title="Billionaire Duct Cleaning – Premium Air Duct Cleaning for Luxury Estates in New Jersey & Connecticut"
+        description="Experience white-glove treatment with DuctBuddy’s <strong>exclusive “Billionaire” air duct cleaning service in New Jersey and Connecticut</strong>. Tailored for mansions, luxury penthouses, and high-end estates, our premium service ensures every vent and HVAC component is impeccably cleaned. We use advanced equipment to remove contaminants while respecting your property’s privacy and maintaining elite <strong>indoor air quality</strong> standards. Enjoy unparalleled cleanliness and comfort befitting your luxury home."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

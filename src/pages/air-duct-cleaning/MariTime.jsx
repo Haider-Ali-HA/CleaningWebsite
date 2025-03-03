@@ -85,8 +85,8 @@ const MariTime = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Maritime Air Duct Cleaning"
-        description="Keep your crew and passengers breathing fresh air with our specialized air duct cleaning services for maritime vessels."
+        title="Maritime Air Duct Cleaning in New Jersey & Connecticut – Clean Air for Ships & Yachts"
+        description="Trust DuctBuddy for <strong>maritime air duct cleaning in New Jersey and Connecticut</strong> at local ports and marinas. We service yachts, ferries, and commercial ships, removing salt, mildew, and odors from onboard HVAC systems to ensure fresh, healthy air at sea. Our specialized team understands the unique challenges of marine ventilation and delivers thorough cleaning to improve vessel <strong>indoor air quality</strong> and comfort for crew and passengers."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

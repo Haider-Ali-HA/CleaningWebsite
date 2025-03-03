@@ -83,8 +83,8 @@ const PtacCleaning = () => {
 
       <Navbar />
       <Hero
-        title="PTAC Cleaning"
-        description="Elevate your living environment with our exclusive PTAC cleaning service."
+        title="PTAC Cleaning & Maintenance in New Jersey & Connecticut – Keep Your PTAC Units Running Efficiently"
+        description="Ensure your PTAC systems run efficiently year-round with DuctBuddy’s <strong>PTAC cleaning services in New Jersey and Connecticut</strong>. We remove dirt, mold, and debris from Packaged Terminal AC units in apartments, hotels, and condos to improve performance and <strong>indoor air quality</strong>. Regular PTAC maintenance by our team extends your unit’s lifespan, lowers energy costs, and keeps your spaces comfortable."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

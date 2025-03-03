@@ -88,8 +88,8 @@ const FireRestoration = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Fire Restoration"
-        description="Restore your property to its original state with our expert fire restoration services."
+        title="Fire Damage Restoration Services in New Jersey & Connecticut – Rebuild & Restore After a Fire"
+        description="Recover quickly from disaster with DuctBuddy’s <strong>fire damage restoration services in New Jersey and Connecticut</strong>. We handle emergency debris removal and board-up, smoke odor elimination, and complete water extraction and drying after firefighting efforts. Our team works efficiently to repair damage and ensure your <strong>indoor air is clean and safe</strong> once again."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

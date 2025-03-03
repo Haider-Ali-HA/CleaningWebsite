@@ -86,8 +86,8 @@ const Residential = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Residential Air Duct Cleaning"
-        description="Protect your family and enhance the efficiency of your home with our comprehensive duct cleaning services."
+        title="Residential Air Duct Cleaning in New Jersey & Connecticut – Breathe Easier at Home"
+        description="Give your family the gift of clean air with DuctBuddy’s <strong>residential air duct cleaning in New Jersey and Connecticut</strong>. Our team removes dust, pollen, and pet dander from your HVAC ducts to help reduce allergies and improve <strong>indoor air quality</strong>. Enjoy a healthier home environment, better HVAC efficiency, and peace of mind knowing your air is fresh and clean."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

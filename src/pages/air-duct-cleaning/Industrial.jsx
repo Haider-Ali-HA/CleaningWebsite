@@ -87,8 +87,8 @@ const Industrial = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Industrial Air Duct Cleaning"
-        description="Protect your workforce and enhance the efficiency of your industrial operations with our comprehensive duct cleaning services."
+        title="Industrial Air Duct Cleaning in New Jersey & Connecticut – Heavy-Duty HVAC Cleaning Solutions"
+        description="Maintain safety and efficiency in large facilities with DuctBuddy’s <strong>industrial air duct cleaning services in New Jersey and Connecticut</strong>. We tackle heavy dust, chemical residue, and debris in factory and warehouse HVAC systems, helping prevent equipment breakdowns and improving <strong>indoor air quality</strong> for your workforce. Our team is equipped to clean high-capacity ventilation systems with minimal downtime, keeping your operations running smoothly and your air safe to breathe."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

@@ -92,8 +92,8 @@ const SmokeRestoration = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Smoke Restoration"
-        description="Restore your property with our expert smoke restoration services."
+        title="Smoke Damage Restoration Services in New Jersey & Connecticut – Eliminate Soot & Odors"
+        description="Restore your property after a fire with DuctBuddy’s <strong>smoke damage restoration services in New Jersey and Connecticut</strong>. We clean soot from walls, furniture, and HVAC ducts, and use specialized treatments to remove stubborn smoke odors. Our team works quickly to <strong>improve air quality</strong>, making your home or business safe and odor-free again."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">

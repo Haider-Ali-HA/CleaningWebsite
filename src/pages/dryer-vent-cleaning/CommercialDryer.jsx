@@ -81,8 +81,8 @@ const CommercialDryer = () => {
       </Helmet>
       <Navbar />
       <Hero
-        title="Commercial Dryer Vent Cleaning"
-        description="Ensure the safety and efficiency of your commercial dryers with our professional cleaning services."
+        title="Commercial Dryer Vent Cleaning in New Jersey & Connecticut – Prevent Fire Hazards & Downtime"
+        description="Keep your laundromat, hotel, or facility safe with DuctBuddy’s <strong>commercial dryer vent cleaning services in New Jersey and Connecticut</strong>. We clear lint buildup from high-volume dryer systems to prevent fires and maintain fast drying times for your business. By scheduling regular cleanings, you reduce downtime, prolong equipment life, and ensure a safer environment while maintaining healthy <strong>indoor air quality</strong> for employees and customers."
         Image={Image} // Adjusted image usage
       />
       <div className="bg-gray-50 text-gray-800">
