@@ -7,6 +7,7 @@ import IndustrialImage from "../../assets/air-duct-cleaning/industrial.jpg"; // 
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -75,6 +76,15 @@ const processSteps = [
 const Industrial = () => {
   return (
     <div>
+      <Helmet>
+        <title>Industrial Air Duct Cleaning | Optimize Operations & Improve Efficiency with Duct Buddy</title>
+        <meta
+          name="description"
+          content="Enhance industrial HVAC performance and ensure clean air in your facility with Duct Buddy's comprehensive industrial air duct cleaning services. Reduce energy costs and boost efficiency."
+        />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/air-duct/industrial" />
+
+      </Helmet>
       <Navbar />
       <Hero
         title="Industrial Air Duct Cleaning"

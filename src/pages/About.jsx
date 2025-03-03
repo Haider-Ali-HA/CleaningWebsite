@@ -7,10 +7,16 @@ import Navbar from "../components/common/Navbar";
 import Image from "../assets/about/about.jpg"; // Adjusted image path
 import Hero from "../components/common/Hero";
 import OurServiceArea from "../components/about-us/OurServiceArea";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>About Us - Duct Buddy | Trusted Duct Cleaning Experts in NJ & CT</title>
+        <meta name="description" content="Learn about Duct Buddy's mission, team, and commitment to delivering top-quality air duct, dryer vent, and HVAC cleaning services for homes and businesses in New Jersey and Connecticut." />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/about-us" />
+      </Helmet>
       <Navbar />
       <Hero
         title="About Us"

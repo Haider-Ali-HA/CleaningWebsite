@@ -7,6 +7,7 @@ import BillionareImage from "../../assets/air-duct-cleaning/billionare.jpg"; // 
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -73,6 +74,15 @@ const processSteps = [
 const Billionare = () => {
   return (
     <div>
+      <Helmet>
+        <title>Billionaire Air Duct Cleaning | Luxury Duct Services by Duct Buddy</title>
+        <meta
+          name="description"
+          content="Experience premium duct cleaning services for upscale properties. Duct Buddy offers exclusive, high-end cleaning solutions for estates, yachts, private jets, and luxury commercial spaces."
+        />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/air-duct/residential" />
+      </Helmet>
+
       <Navbar />
       <Hero
         title="Billionare Air Duct Cleaning"

@@ -7,7 +7,7 @@ import FireRestorationImage from "../../assets/restoration/fire-restoration.jpg"
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
-
+import { Helmet } from "react-helmet";
 const data = [
   {
     question: "What is the first step in fire restoration?",
@@ -72,6 +72,20 @@ const processSteps = [
 const FireRestoration = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+        Fire Restoration Services In Nj And CT 
+        | Comprehensive Cleanup & Recovery by Duct Buddy 
+        </title>
+        <meta
+          name="description"
+          content="Recover quickly after a fire with Duct Buddy's professional fire restoration services. We clean and restore your property to its original condition while ensuring safety and quality."
+        />
+        <link
+          rel="canonical"
+          href="https://www.ductbuddyllc.com/restoration/fire"
+        />
+      </Helmet>
       <Navbar />
       <Hero
         title="Fire Restoration"

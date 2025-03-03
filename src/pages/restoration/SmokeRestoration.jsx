@@ -7,7 +7,7 @@ import SmokeRestorationImage from "../../assets/restoration/smoke-restoration.jp
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
-
+import { Helmet } from "react-helmet";
 const data = [
   {
     question: "What is Smoke Restoration?",
@@ -75,6 +75,21 @@ const processSteps = [
 const SmokeRestoration = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+          Smoke Restoration Services In Nj And CT |Restore Your Property with
+          Duct Buddy
+        </title>
+        <meta
+          name="description"
+          content="Trust Duct Buddy for comprehensive smoke restoration services to clean and restore your property after a fire.
+                  Improve air quality and recover your space efficiently."
+        />
+        <link
+          rel="canonical"
+          href="https://www.ductbuddyllc.com/restoration/smoke"
+        />
+      </Helmet>
       <Navbar />
       <Hero
         title="Smoke Restoration"

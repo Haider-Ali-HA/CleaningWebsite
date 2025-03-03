@@ -7,7 +7,7 @@ import MoldRestorationImage from "../../assets/restoration/mold-restoration.jpg"
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
-
+import { Helmet } from "react-helmet";
 const data = [
   {
     question: "What is the first step in mold restoration?",
@@ -75,6 +75,21 @@ const processSteps = [
 const MoldRestoration = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+          Mold Restoration Services In Nj And CT | Eliminate Mold & Improve Air
+          Quality with Duct Buddy
+        </title>
+        <meta
+          name="description"
+          content="Remove mold and safeguard your home 
+          with Duct Buddy's expert mold restoration services. Our proven process improves air quality and protects your property from future mold growth."
+        />
+        <link
+          rel="canonical"
+          href="https://www.ductbuddyllc.com/restoration/mold"
+        />
+      </Helmet>
       <Navbar />
       <Hero
         title="Mold Restoration"

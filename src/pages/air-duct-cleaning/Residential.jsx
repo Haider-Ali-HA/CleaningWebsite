@@ -7,6 +7,7 @@ import ResidentialImage from "../../assets/air-duct-cleaning/residential.jpg"; /
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -75,6 +76,14 @@ const processSteps = [
 const Residential = () => {
   return (
     <div>
+      <Helmet>
+        <title>Residential Air Duct Cleaning | Improve Home Air Quality & HVAC Efficiency</title>
+        <meta
+          name="description"
+          content="Protect your family’s health with our expert residential air duct cleaning services. Enhance your HVAC system’s efficiency and enjoy a cleaner, healthier home environment in NJ & CT.Protect your family and enhance the efficiency of your home with our comprehensive residential duct cleaning services. Contact us today to schedule an appointment."
+        />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/air-duct/residential" />
+      </Helmet>
       <Navbar />
       <Hero
         title="Residential Air Duct Cleaning"

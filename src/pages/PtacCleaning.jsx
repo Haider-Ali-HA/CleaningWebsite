@@ -7,6 +7,7 @@ import PtacImage from "../assets/ptac-cleaning/ptac-cleaning.jpg"; // Adjusted i
 import IntroductionSection from "../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../components/common/all-services-section/ProcessSection";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -74,6 +75,12 @@ const processSteps = [
 const PtacCleaning = () => {
   return (
     <div>
+       <Helmet>
+        <title>PTAC Cleaning Service - Duct Buddy | Professional PTAC Cleaning in NJ & CT</title>
+        <meta name="description" content="Discover our specialized PTAC cleaning services designed to optimize your Packaged Terminal Air Conditioner performance and improve indoor air quality." />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/ptac-cleaning" />
+      </Helmet>
+
       <Navbar />
       <Hero
         title="PTAC Cleaning"

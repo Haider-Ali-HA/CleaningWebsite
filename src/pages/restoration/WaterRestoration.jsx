@@ -7,7 +7,7 @@ import WaterRestorationImage from "../../assets/restoration/water-restoration.jp
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
-
+import { Helmet } from "react-helmet";
 const data = [
   {
     question: "What is Water Restoration?",
@@ -80,6 +80,20 @@ const processSteps = [
 const WaterRestoration = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+        Water Restoration Services In Nj And CT 
+        | Fast, Reliable Cleanup & Recovery with Duct Buddy
+        </title>
+        <meta
+          name="description"
+          content="Address water damage swiftly with Duct Buddy's water restoration services. Our experts mitigate damage and restore your property’s safety and comfort after water-related incidents."
+        />
+        <link
+          rel="canonical"
+          href="https://www.ductbuddyllc.com/restoration/water"
+        />
+      </Helmet>
       <Navbar />
       <Hero
         title="Water Restoration"

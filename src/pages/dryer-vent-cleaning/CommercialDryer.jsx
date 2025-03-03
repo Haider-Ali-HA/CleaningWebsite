@@ -7,7 +7,7 @@ import CommercialDryerImage from "../../assets/dryer-vent-cleaning/comercial-dry
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
-
+import { Helmet } from "react-helmet";
 const data = [
   {
     question: "Why is commercial dryer vent cleaning important?",
@@ -70,6 +70,15 @@ const processSteps = [
 const CommercialDryer = () => {
   return (
     <div>
+      <Helmet>
+        <title>Commercial Dryer Vent Cleaning In Nj And CT Areas| Enhance Efficiency with Duct Buddy</title>
+        <meta
+          name="description"
+          content="Duct Buddy offers professional commercial dryer vent cleaning services designed to maintain efficient dryer performance and 
+          prevent fire risks in commercial properties."
+        />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/dryer-vent/commercial" />
+      </Helmet>
       <Navbar />
       <Hero
         title="Commercial Dryer Vent Cleaning"

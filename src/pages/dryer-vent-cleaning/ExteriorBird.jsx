@@ -7,7 +7,7 @@ import ExteriorBirdImage from "../../assets/dryer-vent-cleaning/exterior-bird-gu
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
-
+import { Helmet } from "react-helmet";
 const data = [
   {
     question: "Why install an Exterior Bird Guard?",
@@ -74,6 +74,15 @@ const processSteps = [
 const ExteriorBird = () => {
   return (
     <div>
+      <Helmet>
+              <title>Exterior Bird Guard Installation In Nj And CT | Protect Dryer Vents with Duct Buddy</title>
+              <meta
+                name="description"
+                content="Prevent birds and debris from clogging your dryer vents with Duct Buddy's expert exterior bird guard installation.
+                 Safeguard your home’s dryer performance and ensure safety."
+              />
+              <link rel="canonical" href="https://www.ductbuddyllc.com/dryer-vent/bird-guard" />
+     </Helmet>
       <Navbar />
       <Hero
         title="Exterior Bird Guard"

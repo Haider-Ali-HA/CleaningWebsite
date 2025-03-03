@@ -7,6 +7,7 @@ import MariTimeImage from "../../assets/air-duct-cleaning/maritime.jpg"; // Adju
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -75,6 +76,13 @@ const processSteps = [
 const MariTime = () => {
   return (
     <div>
+      <Helmet>
+        <title>Maritime Air Duct Cleaning | Keep Vessels Safe & Air Quality High</title>
+        <meta
+          name="description"
+          content="Ensure the safety and comfort of your crew and passengers with professional maritime air duct cleaning services. Keep your vessel's air quality at its best."/>
+        <link rel="canonical" href="https://www.ductbuddyllc.com/air-duct/maritime" />
+      </Helmet>
       <Navbar />
       <Hero
         title="Maritime Air Duct Cleaning"

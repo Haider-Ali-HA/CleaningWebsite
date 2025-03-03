@@ -7,6 +7,7 @@ import AirDuctCleaningImage from "../../assets/air-duct-cleaning/clean-air-duct.
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -77,6 +78,11 @@ const processSteps = [
 const Commercial = () => {
   return (
     <div>
+       <Helmet>
+        <title>Commercial Air Duct Cleaning | Boost Office Air Quality & HVAC Efficiency with Duct Buddy</title>
+        <meta name="description" content="Improve workplace air quality and reduce energy costs with Duct Buddy's professional commercial air duct cleaning services tailored for offices, retail spaces, and industrial facilities." />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/air-duct/commercial" />
+      </Helmet>
       <Navbar />
       <Hero
         title=" Commercial Air Duct Cleaning"

@@ -7,6 +7,7 @@ import ResidentialImage from "../../assets/dryer-vent-cleaning/residential-dryer
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
+import { Helmet } from "react-helmet";
 
 const data = [
   {
@@ -75,6 +76,14 @@ const processSteps = [
 const ResidentialDryer = () => {
   return (
     <div>
+      <Helmet>
+        <title>Residential Dryer Vent Cleaning | Prevent Fire Hazards & Boost Dryer Efficiency with Duct Buddy</title>
+        <meta
+          name="description"
+          content="Ensure safe, efficient dryer operation with Duct Buddy's residential dryer vent cleaning services. Improve energy efficiency and prevent potential fire hazards in your home."
+        />
+        <link rel="canonical" href="https://www.ductbuddyllc.com/dryer-vent/residential" />
+      </Helmet>
       <Navbar />
       <Hero
         title="Residential Dryer Vent Cleaning"
