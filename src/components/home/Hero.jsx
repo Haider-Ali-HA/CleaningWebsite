@@ -12,7 +12,7 @@ const Hero = () => {
   const isInView = useInView(refAnimation, { once: true });
 
   return (
-    <div className="h-screen w-full relative text-white py-10">
+    <div className="h-screen w-full relative text-white py-10 overflow-x-hidden">
       <img
         src={newimage}
         alt="Hero Background"
@@ -29,17 +29,17 @@ const Hero = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={fadeInLeftAnimation}
-        className="text-white relative flex flex-col h-full items-center justify-center w-full"
+        className="text-white relative flex flex-col h-full items-center justify-center w-full px-4"
       >
-        <div className="w-3/4 flex flex-col gap-5 mt-20 sm:mt-12 lg:mt-20 items-start">
+        <div className="w-full max-w-4xl flex flex-col gap-5 mt-20 sm:mt-12 lg:mt-20 items-start">
           {/* H1: Keep your main heading referencing local coverage */}
-          <h1 className="text-4xl lg:text-5xl font-semibold">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold">
             Air Duct & Dryer Vent Cleaning in New Jersey & Connecticut – For
             Healthier Indoor Air
           </h1>
 
           {/* Enriched paragraph with local & service-based keywords */}
-          <p className="lg:text-lg tracking-wide md:w-5/6">
+          <p className="lg:text-lg tracking-wide">
             DuctBuddy provides{" "}
             <strong>
               professional air duct cleaning, dryer vent cleaning, and HVAC
