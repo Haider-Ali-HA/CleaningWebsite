@@ -33,7 +33,7 @@ const Hero = () => {
       >
         <div className="w-3/4 flex flex-col gap-5 mt-20 sm:mt-12 lg:mt-20 items-start">
           {/* H1: Keep your main heading referencing local coverage */}
-          <h1 className="text-4xl lg:text-6xl font-semibold">
+          <h1 className="text-4xl lg:text-5xl font-semibold">
             Air Duct & Dryer Vent Cleaning in New Jersey & Connecticut – For
             Healthier Indoor Air
           </h1>
