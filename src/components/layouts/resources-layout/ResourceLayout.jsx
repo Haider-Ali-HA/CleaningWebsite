@@ -19,4 +19,3 @@ const ResourceLayout = () => {
 }
 
 export default ResourceLayout
-

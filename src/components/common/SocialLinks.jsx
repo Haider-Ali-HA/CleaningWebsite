@@ -1,35 +1,29 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const SocialLinks = () => {
   return (
-    <>
-      <Link
-        to="https://www.facebook.com/"
-        className="p-3 bg-white text-black rounded-full hover:bg-primary hover:text-white transition"
+    <div className="flex gap-4 items-center">
+      <a 
+        href="https://www.facebook.com/profile.php?id=61561942924648" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Follow DuctBuddy on Facebook"
+        className="w-10 h-10 rounded-full border border-gray-300 flex justify-center items-center text-white hover:bg-primary hover:border-primary transition-all duration-300"
       >
         <FaFacebookF />
-      </Link>
-      <Link
-      to="https://www.Instagram.com/"
-        className="p-3 bg-white text-black rounded-full hover:bg-primary hover:text-white transition"
+      </a>
+      <a 
+        href="https://www.instagram.com/ductbuddyllc" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Follow DuctBuddy on Instagram"
+        className="w-10 h-10 rounded-full border border-gray-300 flex justify-center items-center text-white hover:bg-primary hover:border-primary transition-all duration-300"
       >
         <FaInstagram />
-      </Link>
-      <Link
-        to="https://www.Twitter.com/"
-        className="p-3 bg-white text-black rounded-full hover:bg-primary hover:text-white transition"
-      >
-        <FaTwitter />
-      </Link>
-      <Link
-        to="https://www.Youtube.com/"
-        className="p-3 bg-white text-black rounded-full hover:bg-primary hover:text-white transition"
-      >
-        <FaYoutube />
-      </Link>
-    </>
+      </a>
+    </div>
   );
 };
 

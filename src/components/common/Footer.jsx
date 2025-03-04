@@ -102,6 +102,17 @@ const Footer = () => {
                   Contact{" "}
                 </Link>
               </li>
+              <li>
+      <Link
+        to="/privacy-policy"
+        title=""
+        className="flex text-base text-gray-300 transition-all duration-200 hover:text-gray-500"
+      >
+        {" "}
+        Privacy Policy{" "}
+      </Link>
+    </li>
+
             </ul>
           </motion.div>
 

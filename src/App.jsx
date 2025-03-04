@@ -25,6 +25,8 @@ import WaterRestoration from "./pages/restoration/WaterRestoration";
 import About from "./pages/About";
 import Resources from "./pages/Resources";
 import { Helmet } from "react-helmet";
+import WhatsAppButton from "./components/common/WhatsAppButton";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 
 
@@ -73,7 +75,7 @@ const App = () => {
           }
         ],
         "sameAs": [
-          "https://www.facebook.com/ductbuddyllc",
+          "https://www.facebook.com/profile.php?id=61561942924648",
           "https://www.instagram.com/ductbuddyllc"
         ],
         "areaServed": [
@@ -110,7 +112,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/resources/reviews" element={<Reviews />} />
@@ -141,6 +143,8 @@ const App = () => {
         <Route path={"/restoration/water"} element={<WaterRestoration />} />
       </Routes>
       <Footer />
+
+      <WhatsAppButton /> 
     </div>
   );
 };

@@ -88,4 +88,3 @@ const CaseStudy = () => {
 };
 
 export default CaseStudy;
-
