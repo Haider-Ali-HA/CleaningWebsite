@@ -121,4 +121,3 @@ const SingleCaseStudy = () => {
 };
 
 export default SingleCaseStudy;
-

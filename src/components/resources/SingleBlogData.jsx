@@ -146,4 +146,3 @@ const SingleBlogData = () => {
 };
 
 export default SingleBlogData;
-
