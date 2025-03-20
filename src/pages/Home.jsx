@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
-    <>
+    <div className="w-auto overflow-hidden">
       <Helmet>
         <title>Home - Duct Buddy | Professional Air Duct & HVAC Cleaning in NJ & CT</title>
         <meta name="description" content="Duct Buddy offers expert air duct, dryer vent, and HVAC cleaning services for residential and commercial properties in New Jersey and Connecticut. Improve your indoor air quality today!" />
@@ -21,7 +21,7 @@ const Home = () => {
       <FeatureAndBenefits />
       <CustomerReviews />
       <GoogleReviews />
-    </>
+    </div>
   );
 };
 

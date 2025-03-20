@@ -20,11 +20,11 @@ const Hero = ({title,description,Image}) => {
         initial="hidden"
         animate={isInView  ? "visible" : "hidden"}
         variants={fadeInLeftAnimation} className="relative px-5 text-center z-10 flex flex-col items-center justify-center h-full">
-        <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+        <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl w-5/6">
          {title}
         </h1>
         <p 
-  className="max-w-xl mx-auto mt-4 text-base text-center leading-relaxed text-gray-200"
+  className="max-w-2xl mx-auto mt-4 text-base text-center leading-relaxed text-gray-200"
   dangerouslySetInnerHTML={{ __html: description }}
 ></p>
       </motion.div>
