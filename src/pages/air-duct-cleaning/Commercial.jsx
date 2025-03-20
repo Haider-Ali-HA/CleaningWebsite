@@ -7,6 +7,7 @@ import AirDuctCleaningImage from "../../assets/air-duct-cleaning/clean-air-duct.
 import IntroductionSection from "../../components/common/all-services-section/IntroductionSection";
 import BenefitsSection from "../../components/common/all-services-section/BenefitsSection";
 import ProcessSection from "../../components/common/all-services-section/ProcessSection";
+import BeforeAfterSection from "../../components/home/BeforeAfterSection";
 import { Helmet } from "react-helmet";
 
 const data = [
@@ -106,6 +107,14 @@ const Commercial = () => {
             image={AirDuctCleaningImage}
           />
         </section>
+
+        {/* Add Before After Section here */}
+<BeforeAfterSection 
+  beforeImage="/images/before-commercial-duct.webp"
+  afterImage="/images/after-commercial-duct.webp"
+  title="Commercial Air Duct Cleaning Results"
+  description="See the dramatic difference our professional cleaning makes in commercial HVAC systems, removing years of dust and contaminant buildup that affects workplace air quality."
+/>
 
         {/* Benefits Section */}
         <section className="py-16 px-5 bg-[#0B1215] ">

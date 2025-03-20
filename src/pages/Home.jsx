@@ -1,10 +1,10 @@
 import React from "react";
 import Hero from "../components/home/Hero";
 import Services from "../components/home/Services";
-import ChooseUs from "../components/home/ChooseUs";
 import GoogleReviews from "../components/common/GoogleReviews";
 import CustomerReviews from "../components/resources/CustomerReviews";
 import FeatureAndBenefits from "../components/home/FeatureAndBenefits";
+import BeforeAfterSection from "../components/home/BeforeAfterSection";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
@@ -15,9 +15,9 @@ const Home = () => {
         <meta name="description" content="Duct Buddy offers expert air duct, dryer vent, and HVAC cleaning services for residential and commercial properties in New Jersey and Connecticut. Improve your indoor air quality today!" />
         <link rel="canonical" href="https://www.ductbuddyllc.com/" />
       </Helmet>
-      <Hero  />
+      <Hero />
       <Services />
-      <ChooseUs />
+      <BeforeAfterSection /> {/* Add this line */}
       <FeatureAndBenefits />
       <CustomerReviews />
       <GoogleReviews />

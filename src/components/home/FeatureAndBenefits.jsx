@@ -10,17 +10,6 @@ const FeatureAndBenefits = () => {
   const isInView = useInView(refAnimation, { once: true });
 
   // Custom animations for different screen sizes
-  const customRightAnimation = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-  };
-
-  const customUpAnimation = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-  };
-
-  // Function to determine which animation to use based on screen width
   const contentAnimation = {
     hidden: {
       opacity: 0,
@@ -34,6 +23,25 @@ const FeatureAndBenefits = () => {
       transition: { duration: 1 },
     },
   };
+
+  const benefits = [
+    {
+      title: "Improved Indoor Air Quality for Allergy Relief",
+      description: "Our specialized HEPA filtration technology removes up to 99.97% of airborne contaminants, including dust mites, pollen, and pet dander that trigger allergy symptoms in New Jersey and Connecticut homes.",
+    },
+    {
+      title: "Energy Savings Through Efficient HVAC Operation",
+      description: "Professional duct cleaning can reduce energy consumption by up to 21%, lowering monthly utility bills while extending your heating and cooling system's operational lifespan.",
+    },
+    {
+      title: "Healthier Living Spaces for Families with Children",
+      description: "Children are especially vulnerable to poor indoor air quality. Our thorough residential air duct cleaning removes harmful particles that can aggravate asthma and respiratory conditions.",
+    },
+    {
+      title: "Elimination of Musty Odors and Allergen Sources",
+      description: "Deep cleaning of air ducts and vents removes trapped moisture, mold spores, and bacteria that cause persistent household odors and respiratory irritation in NJ & CT homes.",
+    }
+  ];
 
   return (
     <section className="relative py-10 bg-[#0f191d] mt-10">
@@ -58,7 +66,7 @@ const FeatureAndBenefits = () => {
               <img
                 className="relative rounded-lg shadow-2xl w-full max-w-md mx-auto"
                 src={Image}
-                alt="feature and benefits"
+                alt="DuctBuddy professional air duct cleaning in New Jersey"
               />
             </div>
           </motion.div>
@@ -67,21 +75,23 @@ const FeatureAndBenefits = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={contentAnimation}
-            className="lg:w-3/6  px-2 sm:px-14"
+            className="lg:w-3/6 px-2 sm:px-14"
           >
             <h2 className="text-3xl font-bold leading-tight w-full text-primary sm:text-4xl lg:text-5xl">
-              Feature and Benefit
+              Benefits of Professional Air Duct Cleaning
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-200">
-              We combine advanced technology and professional expertise to
-              deliver superior air duct cleaning services tailored for
-              residential, commercial, industrial, maritime, and high-end
-              properties. Our state-of-the-art equipment removes dust,
-              allergens, and pollutants, ensuring improved air quality, enhanced
-              energy efficiency, and a healthier environment. With certified
-              professionals and customized solutions, we help you breathe
-              cleaner air, lower energy costs, and extend the life of your HVAC
-              systems—all while prioritizing your comfort and well-being.
+            
+            <div className="mt-8 space-y-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="border-l-4 border-primary pl-4">
+                  <h3 className="font-semibold text-xl text-white">{benefit.title}</h3>
+                  <p className="mt-2 text-base leading-relaxed text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+            
+            <p className="mt-8 text-base leading-relaxed text-gray-200">
+              At DuctBuddy, we combine advanced NADCA-approved technology with expert certified technicians to deliver superior air duct cleaning services across New Jersey and Connecticut. Our comprehensive cleaning approach improves indoor air quality, enhances energy efficiency, and creates healthier living environments for families and businesses throughout the Northeast.
             </p>
           </motion.div>
         </div>
